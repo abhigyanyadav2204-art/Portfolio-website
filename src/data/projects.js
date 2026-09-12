@@ -1,0 +1,314 @@
+export const projects = {
+  "handi-story": {
+    title: "The Handi Story",
+    eyebrow: "BUSINESS · OPERATIONS · GROWTH",
+    role: "Co-Founder",
+    timeline: "2024 — Present",
+    intro:
+      "An authentic Hyderabadi biryani business started by three college students and built from a cloud kitchen into a restaurant.",
+
+    metrics: [
+      {
+        value: "₹3L+",
+        label: "Revenue in 3 months",
+      },
+      {
+        value: "50+",
+        label: "Orders per day",
+      },
+    ],
+
+    sections: [
+      {
+        heading: "The idea",
+        image: "/assets/handi-idea.jpg",
+        imageAlt: "Image for The idea section",
+        paragraphs: [
+          "In my second year of college, a friend from Hyderabad called me during semester break with an idea: start a cloud kitchen serving authentic Hyderabadi biryani in Imphal.",
+
+          "I had no experience running a food business. I joined anyway.",
+
+          "Three of us started The Handi Story — two college friends and a childhood friend. Each of us put in ₹1 lakh and we registered it as a partnership firm.",
+        ],
+      },
+
+      {
+        heading: "Putting our own money in",
+        paragraphs: [
+          "For me, that ₹1 lakh wasn't money I had sitting around. I borrowed it through a committee-style arrangement, where I took the amount upfront and had to pay it back with interest.",
+
+          "I was teaching tuition on the side to keep up with the monthly payments while we were trying to get the business running.",
+        ],
+      },
+
+      {
+        heading: "Building the operation",
+        paragraphs: [
+          "The first problem was finding someone who could actually make the biryani we wanted to sell.",
+
+          "We were 19-year-old college students trying to hire chefs capable of making authentic Hyderabadi biryani. We booked flights for chefs to come to Imphal, tested their cooking and sent them back when it didn't meet the standard. We were scammed twice in the process.",
+
+          "Getting the right ingredients and equipment into Manipur was another challenge. We sourced spices and utensils from Hyderabad and Delhi while the state was going through a period of conflict.",
+        ],
+      },
+
+      {
+        heading: "Finding customers",
+        paragraphs: [
+          "Once the kitchen was running, the next problem was getting people to buy from us.",
+
+          "We distributed paper flyers across colleges, shops and universities, particularly targeting students from medical and engineering colleges and Telugu students who were more likely to know what authentic Hyderabadi biryani should taste like.",
+
+          "We experimented constantly. We tried bamboo biryani, influencer collaborations, our own shoots, Instagram advertising and barter deals.",
+
+          "On some days, I would personally go hostel to hostel, knock on doors and sell the biryani directly.",
+        ],
+      },
+
+      {
+        heading: "When demand didn't behave",
+        paragraphs: [
+          "One of the hardest parts was learning how unpredictable demand could be.",
+
+          "We once sold around 30 orders from a batch and decided to cook two batches for the following day, expecting demand to continue. The next day, we sold only three orders.",
+
+          "We couldn't let the remaining food go to waste, so we donated it to an orphanage.",
+
+          "It was one of the simplest lessons in the business: demand isn't something you assume. You keep testing it.",
+        ],
+      },
+
+      {
+        heading: "From cloud kitchen to restaurant",
+        paragraphs: [
+          "Over time, we realised the location we were operating from had more potential than we were using.",
+
+          "We slowly added chairs, tables and lighting and turned the cloud kitchen into a full restaurant.",
+
+          "What started as three college students trying to sell biryani became a restaurant that continues to serve hundreds of customers every month.",
+        ],
+      },
+
+      {
+        heading: "The outcome",
+        paragraphs: [
+          "In the first three months, we crossed ₹3 lakh in revenue and reached 50+ orders a day.",
+
+          "More importantly, I got to experience what it means to operate when there is no playbook — finding people, solving supply problems, testing demand, selling directly, dealing with things going wrong and figuring out what to do next.",
+        ],
+      },
+    ],
+  },
+
+  "laarikhojo": {
+  title: "LaariKhojo",
+  eyebrow: "PRODUCT · OPERATIONS · DEVELOPMENT",
+  role: "Operations Intern · Cibos",
+  timeline: "Jun 2026 — Aug 2026",
+  intro:
+    "A discovery platform built around a simple question: If Zomato helps you discover restaurants, how do you discover the street food vendors and tiffin makers around you?",
+
+  metrics: [
+    {
+      value: "700+",
+      label: "Vendors and tiffin makers onboarded",
+    },
+    {
+      value: "1,500",
+      label: "Original onboarding target",
+    },
+  ],
+
+  sections: [
+    {
+      heading: "The assignment",
+      paragraphs: [
+        "This summer, I joined Cibos, a startup working on clean cooking solutions for households and grassroots food businesses, as an Operations Intern.",
+
+        "Cibos works across clean-cooking products including Orza for households and Agnit for commercial kitchens and street vendors. My assignment was on a separate vertical called LaariKhojo.",
+        
+        "The brief was straightforward: onboard 1,000 street vendors and 500 tiffin makers across Gujarat.",
+      ],
+    },
+
+    {
+      heading: "The marketplace I didn't know I was joining",
+      paragraphs: [
+        "LaariKhojo was being built around a simple question: If Zomato helps you discover restaurants, how do you discover the street food vendors and tiffin makers around you?",
+
+        "When I started, I wasn't coming in with the context of building a marketplace. The website was not really up and running, there were bugs to fix and there were new features that needed to be added. What started as an onboarding assignment quickly became much broader.",
+        
+        "I ended up working on the website while also trying to understand what the platform actually needed to become useful.",
+      ],
+    },
+
+    {
+      heading: "The real problem was trust",
+      paragraphs: [
+        "The technical problem was probably the easier one.",
+
+        "I was visiting street vendors in the afternoon, explaining what LaariKhojo was trying to do, collecting their information, understanding how their businesses worked and figuring out what information actually mattered to them.",
+
+        "I would onboard them and then show them their location pin appearing on the website I was building. The next morning, I would be back fixing things on the platform and then spend the rest of the evening tracking down and onboarding tiffin makers.",
+
+        "I was doing all of this while trying to build trust in a state where I didn't speak the local language.",
+      ],
+    },
+
+    {
+      heading: "Two businesses. Two different problems.",
+      paragraphs: [
+        "A street vendor and a tiffin maker may both sell food, but their businesses operate very differently.",
+
+        "What works for one doesn't necessarily work for the other. That difference started showing up not just in onboarding, but in the product itself.",
+
+        "Even decisions that initially looked small, like choosing the colour palette and deciding how information should be presented, had an impact on the experience for each group.",
+      ],
+    },
+
+    {
+      heading: "A role that kept changing",
+      paragraphs: [
+        "Some days I was writing code.",
+
+        "Some days I was figuring out a product problem. Some days I was tracking down tiffin makers through Google Maps, Instamart, Justdial and other sources. And some days I was simply trying to figure out what the next problem even was.",
+
+        "By the end, I had onboarded 700+ street vendors and tiffin makers while working across development, product and field operations.",
+      ],
+    },
+
+    {
+      heading: "Aahar Bazar",
+      paragraphs: [
+        "The work eventually took LaariKhojo beyond the website and into the field in another way.",
+
+        "LaariKhojo was selected as one of 15 startups from around 200 to showcase its model at Aahar Bazar.",
+
+        "I represented LaariKhojo at the event alongside our founder, Aditya, and one of the tiffin makers I had personally onboarded.",
+        
+        "It was an opportunity to see how other startups and organisations were approaching similar problems, and to learn from conversations with businesses, NGOs and investors.",
+      ],
+    },
+
+    {
+      heading: "The outcome",
+      paragraphs: [
+        "I started with a clear operations target. I ended up working across operations, development, product and UX.",
+
+        "The biggest shift was understanding that getting a product technically functional is only one part of making it work. The harder problem can be getting real people to trust it, use it and tell you what needs to change.",
+      ],
+    },
+  ],
+},
+
+  "benzene": {
+  title: "Benzene",
+  eyebrow: "CONTENT · GROWTH · COMMUNITY",
+  role: "Founder",
+  timeline: "2024 — Present",
+  intro:
+    "A student-driven personal brand built from scratch through content, storytelling and experimentation with distribution.",
+
+  metrics: [
+    {
+      value: "100K+",
+      label: "Views",
+    },
+    {
+      value: "200K+",
+      label: "Monthly interactions",
+    },
+  ],
+
+  sections: [
+    {
+        heading: "Starting from zero",
+        image: "/assets/benzene-idea.jpg",
+        imageAlt: "Image for Starting from zero section",
+      paragraphs: [
+        "Benzene started as an experiment in putting ideas out into the world.",
+        
+        "I wasn't naturally comfortable being in front of a camera. I started learning by doing — picking up a camera, making content, figuring out what people responded to and improving with every iteration.",
+      ],
+    },
+
+    {
+      heading: "Learning distribution",
+      paragraphs: [
+        "The work quickly became less about simply making posts and more about understanding why something gets attention.",
+        
+        "I experimented with storytelling, formats, hooks, editing, distribution and different ways of presenting ideas to a student audience.",
+        
+        "Some experiments worked. A lot didn't. The process taught me how much of content is really about understanding the audience and the distribution system around the content.",
+      ],
+    },
+
+    {
+      heading: "Building the audience",
+      paragraphs: [
+        "Over time, Benzene grew into a student-driven personal brand and community around startups, ideas and experimentation.",
+        
+        "The content has crossed 100K+ views, with 200K+ monthly interactions at its peak.",
+      ],
+    },
+
+    {
+      heading: "What I am really building",
+      paragraphs: [
+        "The biggest value of Benzene wasn't any individual post. It was learning how to take an idea, package it for an audience, put it into the world and learn from what happened next.",
+      ],
+    },
+  ],
+},
+
+  "meet-ups": {
+  title: "Meet Ups",
+  eyebrow: "COMMUNITY · RESEARCH · PRODUCT",
+  role: "Founder",
+  timeline: "2025 — Present",
+  intro:
+    "An attempt to solve a problem I kept seeing in college: students finding the right people to learn, build and collaborate with.",
+
+  metrics: [],
+
+  sections: [
+    {
+        heading: "The problem",
+        image: "/assets/meetups-idea.jpg",
+        imageAlt: "Image for The problem section",
+      paragraphs: [
+        "College gives you access to a lot of people, but finding the right ones to learn from, build with or simply talk to isn't always easy.",
+
+        "I kept seeing students with similar interests, ideas or problems who had no easy way of finding each other.",
+      ],
+    },
+
+    {
+      heading: "Starting with research",
+      paragraphs: [
+        "Instead of starting by building a platform, I started by trying to understand whether the problem was actually worth solving.",
+
+        "I spoke to students, looked at how they currently found people and paid attention to the situations where they wanted to connect but didn't know where to start.",
+      ],
+    },
+
+    {
+      heading: "Taking it offline",
+      paragraphs: [
+        "The first experiments were deliberately simple. I started bringing people together through offline sessions and using WhatsApp and existing college networks to get people into the same room.",
+
+        "These sessions became a way to test the underlying problem without hiding behind a product. I could see what conversations happened naturally, where people struggled to connect and what kinds of people they actually wanted to meet.",
+      ],
+    },
+
+    {
+      heading: "What I'm figuring out",
+      paragraphs: [
+        "The question now isn't simply how to build another networking platform. It's how to make finding the right people genuinely useful enough that students want to come back.",
+
+        "I'm still working through that problem and figuring out what the product should actually become.",
+      ],
+    },
+  ],
+},
+};
