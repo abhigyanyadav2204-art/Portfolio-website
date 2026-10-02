@@ -2,23 +2,6 @@ import { useEffect, useRef, useState } from "react";
 import { useParams, Link } from "react-router-dom";
 import { projects } from "../data/projects";
 
-function ProjectDiagram({ projectId, revealed }) {
-  return (
-    <div
-      className={`case-diagram case-diagram--${projectId} project-reveal${revealed ? " is-revealed" : ""}`}
-      data-reveal="diagram"
-      aria-hidden="true"
-    >
-      <span />
-      <span />
-      <span />
-      <span />
-      <span />
-      <span />
-    </div>
-  );
-}
-
 function ProjectPage() {
   const { projectId } = useParams();
   const project = projects[projectId];
@@ -107,8 +90,6 @@ function ProjectPage() {
           ))}
         </section>
       )}
-
-      <ProjectDiagram projectId={projectId} revealed={isRevealed("diagram")} />
 
       {project.sections && (
         <div className="project-content">

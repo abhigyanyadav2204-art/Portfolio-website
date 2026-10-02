@@ -123,7 +123,7 @@ export const projects = {
     {
       heading: "The assignment",
       paragraphs: [
-        "This summer, I joined Cibos, a startup working on clean cooking solutions for households and grassroots food businesses, as an Operations Intern.",
+        "In 2026, I joined Cibos, a startup working on clean cooking solutions for households and grassroots food businesses, as an Operations Intern.",
 
         "Cibos works across clean-cooking products including Orza for households and Agnit for commercial kitchens and street vendors. My assignment was on a separate vertical called LaariKhojo.",
         

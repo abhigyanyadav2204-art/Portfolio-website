@@ -4,7 +4,7 @@ import { projects } from "../data/projects";
 import heroWorkspace from "../assets/hero-workspace.png";
 import "../App.css";
 
-const journeyProjectIds = ["handi-story", "benzene", "meet-ups", "laarikhojo"];
+const journeyProjectIds = ["handi-story", "benzene", "laarikhojo", "meet-ups"];
 
 function Home() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -19,8 +19,8 @@ function Home() {
           className="menu-toggle"
           type="button"
           aria-label="Toggle navigation"
-          aria-expanded={isMenuOpen}
           aria-controls="primary-navigation"
+          aria-expanded={isMenuOpen}
           onClick={() => setIsMenuOpen((isOpen) => !isOpen)}
         >
           <span />
@@ -37,8 +37,14 @@ function Home() {
 
       <main>
         <section className="hero" aria-labelledby="hero-title">
+          <figure className="hero-scene">
+            <img
+              src={heroWorkspace}
+              alt="A young builder working in a neutral-toned creative workspace."
+            />
+          </figure>
+
           <div className="hero-copy">
-            <p className="hero-kicker">BUILDER · PRODUCT · GROWTH · TECHNOLOGY</p>
             <h1 id="hero-title">I BUILD THINGS.</h1>
             <p>
               I work at the intersection of product, operations, growth and technology.
@@ -46,20 +52,12 @@ function Home() {
             </p>
             <a href="#work" className="hero-cta">Explore my journey ↓</a>
           </div>
-
-          <figure className="hero-scene">
-            <img
-              src={heroWorkspace}
-              alt="A monochrome 3D illustration of a young builder in a workspace."
-            />
-          </figure>
         </section>
 
-        <section className="section about" id="about">
-          <div className="section-label"><span>01 / ABOUT</span></div>
-
+        <section className="about" id="about" aria-labelledby="about-title">
           <div className="about-content">
-            <h2>I like being where<br />the problem is.</h2>
+            <p className="section-eyebrow">How I work</p>
+            <h2 id="about-title">I like being where the problem is.</h2>
             <p>
               I've built a business from scratch, worked on a marketplace with street vendors,
               built a personal brand from zero, and worked across growth, operations and sales.
@@ -78,11 +76,9 @@ function Home() {
 
         <section className="journey" id="work" aria-labelledby="journey-title">
           <div className="journey-intro">
-            <p className="section-label">02 / THE JOURNEY SO FAR</p>
-            <h2 id="journey-title">The journey so far.</h2>
-            <p>
-              A timeline of the businesses, products, communities and experiments I have worked on.
-            </p>
+            <p className="section-eyebrow">The journey so far</p>
+            <h2 id="journey-title">I didn't start with product. I started by trying to make something work.</h2>
+            <p>That became a series of businesses, experiments and problems worth getting close to.</p>
           </div>
 
           <div className="journey-timeline">
@@ -92,7 +88,7 @@ function Home() {
               return (
                 <article
                   className="journey-item"
-                  id={projectId === "laarikhojo" ? "now" : undefined}
+                  id={projectId === "meet-ups" ? "now" : undefined}
                   key={projectId}
                 >
                   <p className="journey-date">{project.timeline}</p>
@@ -100,8 +96,20 @@ function Home() {
                     <p className="journey-context">{project.eyebrow}</p>
                     <h3>{project.title}</h3>
                     <p>{project.intro}</p>
+
+                    {project.metrics.length > 0 && (
+                      <div className="journey-metrics" aria-label={`${project.title} metrics`}>
+                        {project.metrics.map((metric) => (
+                          <div key={metric.label}>
+                            <strong>{metric.value}</strong>
+                            <span>{metric.label}</span>
+                          </div>
+                        ))}
+                      </div>
+                    )}
+
                     <p className="journey-role">{project.role}</p>
-                    <Link to={`/work/${projectId}`} className="journey-link">View project →</Link>
+                    <Link to={`/work/${projectId}`} className="journey-link">Read the story →</Link>
                   </div>
                 </article>
               );
@@ -109,20 +117,22 @@ function Home() {
           </div>
         </section>
 
-        <section className="sidequests">
+        <section className="sidequests" aria-labelledby="sidequests-title">
           <div>
-            <p className="section-label">03 / SIDE QUESTS</p>
+            <p className="section-eyebrow">Along the way</p>
+            <h2 id="sidequests-title">A few other things happened along the way.</h2>
             <p>Hackathons, drones, startups, motorcycles and other things I've ended up doing.</p>
           </div>
-          <Link to="/sidequests" className="underlined">Explore side quests →</Link>
+          <Link to="/sidequests" className="text-link">Explore side quests →</Link>
         </section>
 
-        <section className="contact" id="contact">
-          <p className="section-label">04 / CONTACT</p>
-          <h2>Building something?<br />Let's talk.</h2>
+        <section className="contact" id="contact" aria-labelledby="contact-title">
+          <p className="section-eyebrow">Connect</p>
+          <h2 id="contact-title">Building something?<br />Let's talk.</h2>
           <div className="contact-links">
-            <a href="mailto:thebenzene2208@gmail.com" className="underlined">Email →</a>
+            <a href="https://www.instagram.com/benzene_co/" target="_blank" rel="noreferrer">Instagram ↗</a>
             <a href="https://www.linkedin.com/in/abhigyan-yadav-09a4b92a4/" target="_blank" rel="noreferrer">LinkedIn ↗</a>
+            <a href="mailto:thebenzene2208@gmail.com">Email →</a>
             <a href="https://github.com/abhigyanyadav2204-art" target="_blank" rel="noreferrer">GitHub ↗</a>
           </div>
         </section>
