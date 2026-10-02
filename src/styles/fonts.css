@@ -1,0 +1,140 @@
+/* ============================================================
+   Fonts — self-hosted woff2 from /public/fonts.
+
+   Self-hosted rather than CDN because <link rel="preload"> needs a
+   stable URL, and it avoids a third-party connection on first paint.
+   Archivo, Archivo Black and IBM Plex Mono are all SIL OFL.
+
+   Each family ships as TWO subset files — latin and latin-ext — each
+   with its own unicode-range, exactly like Google's own CSS. This
+   matters: the case-study prose uses the rupee sign U+20B9 (₹3L+,
+   ₹1.3L), which sits in the latin-ext range (U+20AD-20C0), NOT in
+   "latin". Shipping only the "latin" file (the common mistake when
+   self-hosting "a" Google Font) would make ₹ silently fall back to
+   the system font mid-word. Two small files + unicode-range costs
+   nothing extra: the browser only ever fetches the one it needs.
+   ============================================================ */
+
+@font-face {
+  font-family: "Archivo Black";
+  src: url("/fonts/archivo-black-400-latin.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6,
+    U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122,
+    U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: "Archivo Black";
+  src: url("/fonts/archivo-black-400-latin-ext.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7,
+    U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F,
+    U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F,
+    U+A720-A7FF;
+}
+
+@font-face {
+  font-family: "Archivo";
+  src: url("/fonts/archivo-var-latin.woff2") format("woff2");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6,
+    U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122,
+    U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: "Archivo";
+  src: url("/fonts/archivo-var-latin-ext.woff2") format("woff2");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7,
+    U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F,
+    U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F,
+    U+A720-A7FF;
+}
+
+@font-face {
+  font-family: "IBM Plex Mono";
+  src: url("/fonts/ibm-plex-mono-400-latin.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6,
+    U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122,
+    U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: "IBM Plex Mono";
+  src: url("/fonts/ibm-plex-mono-400-latin-ext.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7,
+    U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F,
+    U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F,
+    U+A720-A7FF;
+}
+
+@font-face {
+  font-family: "IBM Plex Mono";
+  src: url("/fonts/ibm-plex-mono-600-latin.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6,
+    U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122,
+    U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: "IBM Plex Mono";
+  src: url("/fonts/ibm-plex-mono-600-latin-ext.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7,
+    U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F,
+    U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F,
+    U+A720-A7FF;
+}
+
+/* ── metric-matched fallbacks ───────────────────────────────────
+   Overriding the local fallback's metrics to match the webfont means
+   the swap, when it happens, doesn't reflow the page. These are
+   referenced from the --font-* stacks in tokens.css.               */
+
+@font-face {
+  font-family: "Archivo Fallback";
+  src: local("Arial"), local("Helvetica Neue"), local("Liberation Sans");
+  size-adjust: 101%;
+  ascent-override: 92%;
+  descent-override: 24%;
+  line-gap-override: 0%;
+}
+
+@font-face {
+  font-family: "Archivo Black Fallback";
+  src: local("Arial Black"), local("Impact"), local("Arial Bold");
+  size-adjust: 97%;
+  ascent-override: 92%;
+  descent-override: 24%;
+  line-gap-override: 0%;
+}
+
+@font-face {
+  font-family: "IBM Plex Mono Fallback";
+  src: local("Consolas"), local("Menlo"), local("DejaVu Sans Mono");
+  size-adjust: 103%;
+  ascent-override: 90%;
+  descent-override: 25%;
+  line-gap-override: 0%;
+}

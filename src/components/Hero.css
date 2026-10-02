@@ -1,0 +1,82 @@
+.hero-section {
+  position: relative;
+  isolation: isolate;
+  padding-block-start: clamp(2.5rem, 8vw, 5rem);
+  padding-block-end: var(--section-y);
+}
+
+/* The stud texture is a decorative backdrop layer, separate from the
+   content. It previously masked the whole section (stud-field--fade's
+   mask-image applies to everything painted on the element it's set
+   on) which faded the actual heading and body text to invisible. */
+.hero-section__backdrop {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+}
+
+/* Block layout below 64rem — deliberately NOT a grid here. StudRail and
+   .hero-section__art are both display:none at this width, and a grid
+   with an empty "auto" track still reserves its gap next to that track,
+   while the lone remaining item (.hero-section__copy, pinned to
+   "grid-column: 2") get constrained against a track-sizing calculation
+   that assumes a sibling is occupying column 1. That combination pushed
+   the copy block further right than the container's own padding and
+   overflowed the viewport — simple block flow sidesteps the whole
+   problem, since a display:none child contributes nothing to a block
+   container's layout, which isn't true of an empty grid track. */
+.hero-section__inner {
+  display: block;
+}
+
+.hero-section__copy {
+  max-width: 42rem;
+}
+
+.hero-section__title {
+  font-size: var(--fs-900);
+  margin-block: var(--sp-4) var(--sp-5);
+  color: var(--c-ink);
+}
+
+.hero-section__tagline {
+  font-size: var(--fs-500);
+  color: var(--c-ink-dim);
+  max-width: 38ch;
+  margin-bottom: var(--sp-4);
+}
+
+.hero-section__meta {
+  font-size: var(--fs-200);
+  color: var(--c-ink-faint);
+  margin-bottom: var(--sp-6);
+  text-transform: uppercase;
+}
+
+.hero-section__art {
+  display: none;
+}
+
+@media (min-width: 64rem) {
+  /* Switches to a grid only here, where StudRail and .hero-section__art
+     are both genuinely present — the mismatch that caused the mobile
+     overflow doesn't exist at this breakpoint. */
+  .hero-section__inner {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    gap: var(--sp-8);
+    align-items: center;
+  }
+
+  .hero-section__copy {
+    grid-column: 2;
+  }
+
+  .hero-section__art {
+    display: block;
+    grid-column: 3;
+    grid-row: 1;
+    max-width: 280px;
+    justify-self: end;
+  }
+}

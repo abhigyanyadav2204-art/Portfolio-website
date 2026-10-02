@@ -1,0 +1,24 @@
+.site-footer {
+  background: var(--c-void);
+  padding-block-start: var(--sp-2);
+}
+
+.site-footer__bar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--sp-3);
+  padding-block: var(--sp-6);
+  font-size: var(--fs-300);
+  color: var(--c-ink-dim);
+}
+
+.site-footer__top {
+  color: var(--c-ink-dim);
+  transition: color var(--dur-2) var(--ease-out);
+}
+
+.site-footer__top:hover {
+  color: var(--c-accent);
+}

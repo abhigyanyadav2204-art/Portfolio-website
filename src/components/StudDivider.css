@@ -1,0 +1,31 @@
+/* Reuses the .brick__studs gradient technique from brick.css, just
+   with the field colour standing in for a brick and a tighter pitch
+   so it reads as a rule rather than an actual brick edge. */
+.stud-divider {
+  --brick: var(--c-field-raised);
+  --stud-pitch: 22px;
+  --stud-d: 10px;
+  height: var(--stud-lip);
+  width: 100%;
+}
+
+.stud-divider--dim {
+  opacity: 0.6;
+}
+
+.stud-divider--hot {
+  --brick-stud-hi: var(--c-accent);
+}
+
+.stud-divider {
+  background-image: radial-gradient(
+    circle calc(var(--stud-d) / 2) at 50% 100%,
+    var(--brick-stud-hi) 0 calc(var(--stud-d) * 0.3),
+    var(--brick) calc(var(--stud-d) * 0.34) calc(var(--stud-d) * 0.44),
+    var(--brick-stud-lo) calc(var(--stud-d) * 0.45) calc(var(--stud-d) * 0.5),
+    transparent calc(var(--stud-d) * 0.5)
+  );
+  background-size: var(--stud-pitch) 100%;
+  background-repeat: repeat-x;
+  background-position: calc(var(--stud-pitch) / 2) bottom;
+}

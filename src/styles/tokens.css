@@ -1,0 +1,152 @@
+/* ============================================================
+   Design tokens — the only place raw values are allowed to live.
+   Everything downstream references these. No literal hex, no magic
+   numbers in component sheets.
+   ============================================================ */
+
+:root {
+  /* ── colour · field ─────────────────────────────────────── */
+  --c-void: #0a0a0a;          /* deepest — footer, gutters */
+  --c-field: #0e0e0e;         /* body background */
+  --c-field-raised: #161616;  /* default card surface, nav scrim */
+  --c-field-sunken: #060606;  /* wells, debossed plates */
+  --c-hairline: #262626;
+  --c-hairline-hot: rgba(255, 212, 0, 0.22);
+
+  /* ── colour · ink ───────────────────────────────────────── */
+  --c-ink: #f2f0eb;           /* 16.96:1 on --c-field */
+  --c-ink-dim: #9a9a94;       /*  6.90:1 — body-safe */
+  --c-ink-faint: #6b6b66;     /*  3.40:1 — decorative / >=24px ONLY */
+  --c-ink-invert: #0e0e0e;
+
+  /* ── colour · accent ────────────────────────────────────── */
+  /* ONE loud colour. Reserved for interactive + brand. No project
+     brick uses yellow, so "yellow == you can touch it" never blurs. */
+  --c-accent: #ffd400;        /* 13.49:1 on --c-field */
+  --c-accent-press: #e6be00;
+  --c-accent-soft: rgba(255, 212, 0, 0.14);
+
+  /* ── colour · project brick palette ─────────────────────── */
+  --brick-red: #d2442f;
+  --brick-azure: #2a6fc4;
+  --brick-green: #2f7d56;
+  --brick-orange: #e8821e;
+  --brick-sand: #c9b79a;
+  --brick-slate: #4a4a52;
+
+  /* ── brick derived tints ────────────────────────────────── */
+  /* --brick and --brick-ink are overridden inline per card; every
+     tint below re-derives automatically from whatever is set. */
+  --brick: var(--c-field-raised);
+  --brick-ink: var(--c-ink);
+  --brick-top: color-mix(in srgb, var(--brick), #ffffff 26%);
+  --brick-edge-l: color-mix(in srgb, var(--brick), #ffffff 8%);
+  --brick-edge-r: color-mix(in srgb, var(--brick), #000000 18%);
+  --brick-base: color-mix(in srgb, var(--brick), #000000 52%);
+  --brick-stud-hi: color-mix(in srgb, var(--brick), #ffffff 34%);
+  --brick-stud-lo: color-mix(in srgb, var(--brick), #000000 42%);
+  --brick-plate: color-mix(in srgb, var(--brick), #000000 62%);
+
+  /* ── type · families ────────────────────────────────────── */
+  --font-display: "Archivo Black", "Archivo Black Fallback", "Arial Black",
+    Impact, system-ui, sans-serif;
+  --font-body: "Archivo", "Archivo Fallback", system-ui, -apple-system,
+    "Segoe UI", Arial, sans-serif;
+  --font-mono: "IBM Plex Mono", "IBM Plex Mono Fallback", ui-monospace,
+    "SF Mono", Consolas, monospace;
+
+  /* ── type · fluid scale (mobile-first, 360 → 1280) ──────── */
+  --fs-100: 0.6875rem;  /* 11px — mono micro */
+  --fs-200: 0.8125rem;  /* 13px — eyebrow */
+  --fs-300: 0.9375rem;  /* 15px — meta */
+  --fs-400: 1.0625rem;  /* 17px — body */
+  --fs-500: clamp(1.125rem, 0.95rem + 0.8vw, 1.375rem);  /* lede */
+  --fs-600: clamp(1.375rem, 1.1rem + 1.3vw, 1.875rem);   /* h3 / brick title */
+  --fs-700: clamp(1.75rem, 1.25rem + 2.4vw, 2.75rem);    /* h2 */
+  --fs-800: clamp(2.25rem, 1.4rem + 4.2vw, 4rem);        /* case h1 */
+  --fs-900: clamp(3rem, 1.3rem + 8.5vw, 7rem);           /* hero display */
+
+  --lh-tight: 0.92;
+  --lh-snug: 1.12;
+  --lh-normal: 1.45;
+  --lh-prose: 1.68;
+
+  --tr-display: -0.02em;
+  --tr-mono: 0.08em;
+  --tr-eyebrow: 0.16em;
+  --measure: 66ch;
+
+  /* ── space · 4px base ───────────────────────────────────── */
+  --sp-1: 0.25rem;
+  --sp-2: 0.5rem;
+  --sp-3: 0.75rem;
+  --sp-4: 1rem;
+  --sp-5: 1.5rem;
+  --sp-6: 2rem;
+  --sp-7: 3rem;
+  --sp-8: 4rem;
+  --sp-9: 6rem;
+  --sp-10: 8rem;
+
+  --gutter: clamp(1.25rem, 5vw, 3rem);
+  --section-y: clamp(3.5rem, 12vw, 8rem);
+  --maxw-page: 72rem;
+  --maxw-prose: 42rem;
+  --maxw-wide: 86rem;
+
+  /* ── brick geometry ─────────────────────────────────────── */
+  /* --stud-d and --stud-pitch MUST stay integer px. The stud row is a
+     tiled gradient; fractional tile widths smear across device pixels. */
+  --stud-d: 14px;
+  --stud-pitch: 26px;
+  --stud-lip: 9px;
+  --brick-r: 6px;
+  --brick-depth: 7px;
+  --brick-lift: -4px;
+  --brick-press: 3px;
+  --brick-pad: clamp(1.25rem, 4.5vw, 2rem);
+  --rail-w: 10px;
+
+  /* ── radii ──────────────────────────────────────────────── */
+  --r-xs: 3px;
+  --r-sm: 6px;
+  --r-md: 10px;
+  --r-lg: 16px;
+  --r-pill: 999px;
+
+  /* ── elevation ──────────────────────────────────────────── */
+  --sh-cast-sm: 0 4px 10px rgba(0, 0, 0, 0.5);
+  --sh-cast-md: 0 10px 22px rgba(0, 0, 0, 0.55);
+  --sh-cast-lg: 0 22px 48px rgba(0, 0, 0, 0.6);
+  --sh-plate: inset 0 2px 0 rgba(0, 0, 0, 0.55),
+    inset 0 -1px 0 rgba(255, 255, 255, 0.07);
+
+  /* ── motion ─────────────────────────────────────────────── */
+  --dur-1: 110ms;  /* press */
+  --dur-2: 180ms;  /* hover, colour */
+  --dur-3: 320ms;  /* nav, small reveal */
+  --dur-4: 520ms;  /* brick snap */
+  --dur-5: 720ms;  /* hero entrance */
+  --stagger-step: 90ms;
+
+  --ease-out: cubic-bezier(0.22, 0.61, 0.36, 1);
+  --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
+  --ease-snap: cubic-bezier(0.18, 1.46, 0.44, 0.98);  /* ~13% overshoot */
+  --ease-press: cubic-bezier(0.3, 0, 0.7, 1);
+
+  /* ── z-index ────────────────────────────────────────────── */
+  --z-base: 0;
+  --z-card-hit: 1;
+  --z-card-ink: 2;
+  --z-rail: 20;
+  --z-header: 50;
+  --z-menu: 60;
+  --z-skiplink: 100;
+
+  /* ── focus + targets ────────────────────────────────────── */
+  --focus-w: 3px;
+  --focus-offset: 2px;
+  --focus-ink: #0a0a0a;
+  --focus-glow: #ffd400;
+  --tap-min: 44px;
+}

@@ -1,0 +1,24 @@
+.metric-stamp {
+  display: grid;
+  gap: 2px;
+  padding: var(--sp-3) var(--sp-4);
+  min-width: 7rem;
+}
+
+.metric-stamp__value {
+  font-family: var(--font-display);
+  font-size: var(--fs-600);
+  line-height: 1;
+  letter-spacing: var(--tr-display);
+  color: var(--c-ink);
+}
+
+.metric-stamp__label {
+  display: block;
+  margin-top: var(--sp-1);
+  font-family: var(--font-mono);
+  font-size: var(--fs-100);
+  letter-spacing: var(--tr-eyebrow);
+  text-transform: uppercase;
+  color: var(--c-ink-dim);
+}

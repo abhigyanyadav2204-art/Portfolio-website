@@ -1,0 +1,122 @@
+/* ============================================================
+   Brick primitives — shared by BrickCard, SideQuestCard,
+   StudDivider, StudRail, SpecPanel and the hero.
+
+   Set --brick (and --brick-ink where the face is light) inline on
+   any .brick; every bevel, stud and plate tint re-derives from it.
+   ============================================================ */
+
+/* ── the brick ──────────────────────────────────────────────────
+   Two layers on purpose:
+
+     .brick        static shell. Owns the extrusion and the cast
+                   shadow. NEVER transforms.
+     .brick__body  the moving face. ONLY ever transforms.
+
+   Why split them: the snap-in keyframe animates the shell while
+   hover/press transform the body, so the two never overwrite each
+   other's `transform`. And the depth illusion changes without ever
+   repainting a shadow — only `transform` animates, which keeps it on
+   the compositor and holds 60fps on a mid-range phone.             */
+
+.brick {
+  position: relative;
+  isolation: isolate;
+  border-radius: var(--brick-r);
+  background: var(--brick-base);
+  box-shadow:
+    0 var(--brick-depth) 0 var(--brick-base), /* extruded side */
+    var(--sh-cast-md);                        /* shadow on the floor */
+}
+
+.brick__body {
+  position: relative;
+  border-radius: inherit;
+  background: var(--brick);
+  color: var(--brick-ink);
+  transform: translate3d(0, 0, 0);
+  transition: transform var(--dur-2) var(--ease-out);
+  box-shadow:
+    inset 0 2px 0 var(--brick-top),
+    inset 0 -2px 0 var(--brick-base),
+    inset 2px 0 0 var(--brick-edge-l),
+    inset -2px 0 0 var(--brick-edge-r);
+}
+
+/* Lift — the body rises and reveals the shell's dark base beneath. */
+@media (hover: hover) {
+  .brick:hover .brick__body {
+    transform: translate3d(0, var(--brick-lift), 0);
+  }
+}
+
+/* Press — the body sinks into the shell, covering the base. */
+.brick:has(a:active, button:active) .brick__body {
+  transform: translate3d(0, var(--brick-press), 0);
+  transition-duration: var(--dur-1);
+}
+
+/* ── stud strip ─────────────────────────────────────────────────
+   One radial-gradient tiled by background-size, NOT a
+   repeating-radial-gradient (that repeats concentrically — rings,
+   not a row).
+
+   The circle is anchored at 50% 100% so only its top hemisphere is
+   inside the strip: it reads as a moulded lip, not a row of dots.
+
+   Crispness depends on --stud-d and --stud-pitch staying integer px
+   so tile edges land on device pixels, and on keeping each colour
+   stop pair >=1px apart so the antialiased edge is 1px, not a smear.
+   It is one background layer regardless of stud count.             */
+
+.brick__studs {
+  display: block;
+  height: var(--stud-lip);
+  border-radius: var(--brick-r) var(--brick-r) 0 0;
+  background-image: radial-gradient(
+    circle calc(var(--stud-d) / 2) at 50% 100%,
+    var(--brick-stud-hi) 0 calc(var(--stud-d) * 0.3),
+    var(--brick) calc(var(--stud-d) * 0.34) calc(var(--stud-d) * 0.44),
+    var(--brick-stud-lo) calc(var(--stud-d) * 0.45) calc(var(--stud-d) * 0.5),
+    transparent calc(var(--stud-d) * 0.5)
+  );
+  background-size: var(--stud-pitch) 100%;
+  background-repeat: repeat-x;
+  background-position: calc(var(--stud-pitch) / 2) bottom;
+}
+
+/* ── debossed plate ─────────────────────────────────────────────
+   Small text never sits directly on a coloured brick face: off-white
+   is only ~4.0:1 on the red brick and ~2.2:1 on orange, both failing
+   AA. Mixing the brick 62% toward black lands >=9:1 on every palette
+   colour — and reads as a stamped tile, so the constraint pays for
+   itself visually.                                                 */
+
+.plate {
+  background: var(--brick-plate);
+  color: var(--c-ink);
+  border-radius: var(--r-xs);
+  box-shadow: var(--sh-plate);
+}
+
+/* ── ambient stud field ─────────────────────────────────────────
+   Background texture for the hero and section wells. Pure CSS, zero
+   network cost.                                                    */
+
+.stud-field {
+  background-image: radial-gradient(
+    circle 7px at 50% 50%,
+    rgba(255, 255, 255, 0.055) 0 6px,
+    transparent 6.5px
+  );
+  background-size: 34px 34px;
+}
+
+.stud-field--fade {
+  -webkit-mask-image: radial-gradient(
+    120% 80% at 50% 0%,
+    #000 35%,
+    transparent 85%
+  );
+  mask-image: radial-gradient(120% 80% at 50% 0%, #000 35%, transparent 85%);
+}

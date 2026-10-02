@@ -1,0 +1,62 @@
+/* Loose parts in the tray sit at a slight rotation, like scattered
+   bricks rather than a tidy assembled stack. Odd/even alternation
+   keeps neighbours from tilting the same way. Lives on a wrapper
+   outside <Reveal> — see the comment in SideQuestCard.jsx for why. */
+.side-quest-card-tilt {
+  transform: rotate(var(--tilt, 0deg));
+}
+
+.side-quest-card-tilt:nth-child(odd) {
+  --tilt: -0.6deg;
+}
+
+.side-quest-card-tilt:nth-child(even) {
+  --tilt: 0.6deg;
+}
+
+.side-quest-card__face {
+  padding: var(--brick-pad);
+  padding-top: calc(var(--brick-pad) + var(--stud-lip));
+}
+
+.side-quest-card__top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--sp-3);
+  margin-bottom: var(--sp-3);
+}
+
+.side-quest-card__kind {
+  color: color-mix(in srgb, var(--brick-ink), transparent 25%);
+  font-size: var(--fs-200);
+}
+
+.side-quest-card__title {
+  font-family: var(--font-display);
+  font-size: var(--fs-600);
+  line-height: var(--lh-tight);
+  letter-spacing: var(--tr-display);
+  text-transform: uppercase;
+  color: var(--brick-ink);
+  margin-bottom: var(--sp-3);
+}
+
+.side-quest-card__image {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: var(--r-sm);
+  margin-bottom: var(--sp-4);
+}
+
+.side-quest-card__blurb {
+  font-size: var(--fs-300);
+  color: color-mix(in srgb, var(--brick-ink), transparent 15%);
+  margin-bottom: var(--sp-3);
+}
+
+.side-quest-card__role {
+  font-size: var(--fs-200);
+  color: color-mix(in srgb, var(--brick-ink), transparent 30%);
+}

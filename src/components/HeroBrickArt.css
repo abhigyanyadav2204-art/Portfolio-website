@@ -1,0 +1,24 @@
+.hero-brick-art {
+  width: 100%;
+  height: auto;
+  max-width: 440px;
+  overflow: visible;
+}
+
+.hero-brick-art__piece {
+  opacity: 0;
+  animation: brick-settle var(--dur-5) var(--ease-snap) both;
+}
+
+.hero-brick-art__piece--1 { animation-delay: 60ms; }
+.hero-brick-art__piece--2 { animation-delay: 180ms; }
+.hero-brick-art__piece--3 { animation-delay: 300ms; }
+.hero-brick-art__piece--4 { animation-delay: 220ms; }
+.hero-brick-art__piece--5 { animation-delay: 380ms; }
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-brick-art__piece {
+    opacity: 1;
+    animation: none;
+  }
+}

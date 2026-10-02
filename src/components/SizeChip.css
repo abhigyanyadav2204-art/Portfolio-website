@@ -1,0 +1,13 @@
+.size-chip {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 2.75rem;
+  height: 1.5rem;
+  padding-inline: var(--sp-2);
+  border-radius: var(--r-pill);
+  background: color-mix(in srgb, var(--brick-ink), transparent 85%);
+  color: var(--brick-ink);
+  font-size: var(--fs-100);
+  letter-spacing: var(--tr-mono);
+}

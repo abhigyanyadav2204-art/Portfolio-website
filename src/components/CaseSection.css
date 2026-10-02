@@ -1,0 +1,21 @@
+.case-section {
+  max-width: var(--maxw-prose);
+  margin-inline: auto;
+  padding-inline: var(--gutter);
+  margin-bottom: var(--sp-9);
+}
+
+.case-section__heading {
+  font-size: var(--fs-700);
+  color: var(--c-ink);
+  margin-bottom: var(--sp-4);
+}
+
+.case-section__image {
+  width: 100%;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+  border-radius: var(--r-md);
+  margin-bottom: var(--sp-5);
+  background: var(--c-field-raised); /* visible while loading, or if onError hides it */
+}

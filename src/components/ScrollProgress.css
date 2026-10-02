@@ -1,0 +1,41 @@
+.scroll-progress {
+  position: fixed;
+  inset-block: 0;
+  inset-inline-start: 0;
+  width: var(--rail-w);
+  z-index: var(--z-rail);
+  pointer-events: none;
+  background-image: radial-gradient(
+    circle 3px at 50% 50%,
+    var(--c-hairline) 0 2.5px,
+    transparent 3px
+  );
+  background-size: 100% 16px;
+}
+
+.scroll-progress__fill {
+  position: absolute;
+  inset-block-start: 0;
+  inset-inline: 0;
+  height: calc(var(--progress, 0) * 100%);
+  background-image: radial-gradient(
+    circle 3px at 50% 50%,
+    var(--c-accent) 0 2.5px,
+    transparent 3px
+  );
+  background-size: 100% 16px;
+}
+
+/* A progress rail competes with thumb reach on phones and the content
+   gutter is tighter there anyway. */
+@media (max-width: 47.99rem) {
+  .scroll-progress {
+    display: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .scroll-progress__fill {
+    transition: none;
+  }
+}

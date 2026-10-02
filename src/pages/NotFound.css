@@ -1,0 +1,27 @@
+.not-found {
+  display: flex;
+  align-items: center;
+  min-height: 60svh;
+}
+
+.not-found__brick {
+  --brick: var(--c-field-raised);
+  width: 120px;
+  margin-bottom: var(--sp-6);
+}
+
+.not-found__brick .brick__body {
+  height: 52px;
+}
+
+.not-found__title {
+  font-size: var(--fs-800);
+  color: var(--c-ink);
+  margin-block: var(--sp-3) var(--sp-4);
+}
+
+.not-found__copy {
+  color: var(--c-ink-dim);
+  max-width: 44ch;
+  margin-bottom: var(--sp-6);
+}

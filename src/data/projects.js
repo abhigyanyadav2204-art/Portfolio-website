@@ -1,5 +1,11 @@
 export const projects = {
   "handi-story": {
+    order: 1,
+    status: "active",
+    tagline: "Three students, one cloud kitchen, one real restaurant.",
+    brick: { color: "var(--brick-red)", ink: "var(--c-ink)", size: [2, 4] },
+    links: [],
+
     title: "The Handi Story",
     eyebrow: "BUSINESS · OPERATIONS · GROWTH",
     role: "Co-Founder",
@@ -21,8 +27,6 @@ export const projects = {
     sections: [
       {
         heading: "The idea",
-        image: "/assets/handi-idea.jpg",
-        imageAlt: "Image for The idea section",
         paragraphs: [
           "In my second year of college, a friend from Hyderabad called me during semester break with an idea: start a cloud kitchen serving authentic Hyderabadi biryani in Imphal.",
 
@@ -101,6 +105,12 @@ export const projects = {
   },
 
   "laarikhojo": {
+  order: 3,
+  status: "shipped",
+  tagline: "Discovery for the vendors no app had indexed.",
+  brick: { color: "var(--brick-green)", ink: "var(--c-ink)", size: [2, 6] },
+  links: [],
+
   title: "LaariKhojo",
   eyebrow: "PRODUCT · OPERATIONS · DEVELOPMENT",
   role: "Operations Intern · Cibos",
@@ -202,6 +212,12 @@ export const projects = {
 },
 
   "benzene": {
+  order: 2,
+  status: "active",
+  tagline: "A personal brand built from zero, in public.",
+  brick: { color: "var(--brick-azure)", ink: "var(--c-ink)", size: [2, 3] },
+  links: [],
+
   title: "Benzene",
   eyebrow: "CONTENT · GROWTH · COMMUNITY",
   role: "Founder",
@@ -223,8 +239,6 @@ export const projects = {
   sections: [
     {
         heading: "Starting from zero",
-        image: "/assets/benzene-idea.jpg",
-        imageAlt: "Image for Starting from zero section",
       paragraphs: [
         "Benzene started as an experiment in putting ideas out into the world.",
         
@@ -262,6 +276,12 @@ export const projects = {
 },
 
   "meet-ups": {
+  order: 4,
+  status: "active",
+  tagline: "Finding the right people to build with.",
+  brick: { color: "var(--brick-orange)", ink: "var(--c-ink-invert)", size: [1, 4] },
+  links: [],
+
   title: "Meet Ups",
   eyebrow: "COMMUNITY · RESEARCH · PRODUCT",
   role: "Founder",
@@ -274,8 +294,6 @@ export const projects = {
   sections: [
     {
         heading: "The problem",
-        image: "/assets/meetups-idea.jpg",
-        imageAlt: "Image for The problem section",
       paragraphs: [
         "College gives you access to a lot of people, but finding the right ones to learn from, build with or simply talk to isn't always easy.",
 
@@ -312,3 +330,26 @@ export const projects = {
   ],
 },
 };
+
+/**
+ * Slug-stamped, order-sorted array. Replaces the hardcoded
+ * journeyProjectIds list that used to live in Home.jsx — adding a
+ * project now just means adding an entry above with an `order`,
+ * rather than also remembering to update a separate id list.
+ */
+export const projectList = Object.entries(projects)
+  .map(([slug, project]) => ({ slug, ...project }))
+  .sort((a, b) => a.order - b.order);
+
+export const projectSlugs = projectList.map((project) => project.slug);
+
+/** Previous/next case study for CaseNav, by current slug. */
+export function getProjectNeighbours(slug) {
+  const index = projectSlugs.indexOf(slug);
+  if (index < 0) return { prev: null, next: null };
+
+  return {
+    prev: index > 0 ? projectList[index - 1] : null,
+    next: index < projectList.length - 1 ? projectList[index + 1] : null,
+  };
+}

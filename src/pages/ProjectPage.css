@@ -1,0 +1,7 @@
+.case-page {
+  padding-block: var(--section-y);
+}
+
+.case-page__content {
+  margin-top: var(--sp-8);
+}

@@ -1,0 +1,20 @@
+.about-section,
+.contact-section {
+  border-top: 1px solid var(--c-hairline);
+}
+
+.about-section__grid {
+  display: grid;
+  gap: var(--sp-8);
+}
+
+.about-section__copy {
+  min-width: 0;
+}
+
+@media (min-width: 64rem) {
+  .about-section__grid {
+    grid-template-columns: 1.5fr 1fr;
+    align-items: start;
+  }
+}

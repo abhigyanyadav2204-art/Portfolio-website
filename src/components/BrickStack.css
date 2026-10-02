@@ -1,0 +1,9 @@
+.brick-stack-section {
+  border-top: 1px solid var(--c-hairline);
+}
+
+.brick-stack {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-6);
+}

@@ -1,0 +1,87 @@
+.brick-card__face {
+  padding: var(--brick-pad);
+  padding-top: calc(var(--brick-pad) + var(--stud-lip));
+}
+
+.brick-card__top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--sp-3);
+  margin-bottom: var(--sp-4);
+}
+
+.brick-card__timeline {
+  color: color-mix(in srgb, var(--brick-ink), transparent 25%);
+  font-size: var(--fs-200);
+}
+
+.brick-card__eyebrow {
+  font-family: var(--font-mono);
+  font-size: var(--fs-200);
+  letter-spacing: var(--tr-eyebrow);
+  text-transform: uppercase;
+  color: color-mix(in srgb, var(--brick-ink), transparent 15%);
+  margin-bottom: var(--sp-2);
+}
+
+.brick-card__title {
+  font-family: var(--font-display);
+  font-size: var(--fs-700);
+  line-height: var(--lh-tight);
+  letter-spacing: var(--tr-display);
+  text-transform: uppercase;
+  margin-bottom: var(--sp-3);
+}
+
+.brick-card__link {
+  color: var(--brick-ink);
+}
+
+/* The full-card hit area. Positioned on the link so the accessible
+   name stays scoped to the link's own text, not the whole brick. */
+.brick-card__link::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: var(--z-card-hit);
+  border-radius: inherit;
+}
+
+/* Everything that isn't the title needs to sit above that overlay, or
+   it becomes unclickable/unselectable dead space. */
+.brick-card__face > :not(.brick-card__title) {
+  position: relative;
+  z-index: var(--z-card-ink);
+}
+
+/* The ring traces the whole brick rather than just the title text. */
+.brick-card:has(.brick-card__link:focus-visible) {
+  outline: var(--focus-w) solid var(--focus-ink);
+  outline-offset: var(--focus-offset);
+  box-shadow: 0 0 0 calc(var(--focus-offset) + var(--focus-w) * 2) var(--focus-glow);
+}
+
+.brick-card__link:focus-visible {
+  outline: none;
+  box-shadow: none;
+}
+
+.brick-card__tagline {
+  font-size: var(--fs-400);
+  color: color-mix(in srgb, var(--brick-ink), transparent 15%);
+  max-width: 48ch;
+  margin-bottom: var(--sp-5);
+}
+
+.brick-card__metrics {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--sp-3);
+  margin-bottom: var(--sp-5);
+}
+
+.brick-card__role {
+  font-size: var(--fs-200);
+  color: color-mix(in srgb, var(--brick-ink), transparent 30%);
+}

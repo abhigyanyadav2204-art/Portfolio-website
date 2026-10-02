@@ -1,0 +1,4 @@
+.contact-plate {
+  --cluster-gap: var(--sp-4);
+  margin-block-start: var(--sp-6);
+}
