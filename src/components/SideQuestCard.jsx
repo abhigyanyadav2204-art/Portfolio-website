@@ -34,12 +34,13 @@ function SideQuestCard({ quest, index }) {
             <h3 className="side-quest-card__title">{quest.title}</h3>
 
             {quest.image && (
+              // No width/height attrs — these range from square to tall
+              // portrait to landscape (see SideQuestCard.css), so one
+              // hardcoded box would misreport most of their ratios.
               <img
                 src={quest.image}
                 alt={quest.imageAlt}
                 className="side-quest-card__image"
-                width={640}
-                height={480}
                 loading="lazy"
                 decoding="async"
               />

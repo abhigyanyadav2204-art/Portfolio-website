@@ -20,14 +20,13 @@ function Hero() {
         <StudRail />
 
         <div className="hero-section__copy">
-          <p className="eyebrow">{site.identity.degree} · {site.identity.school}</p>
+          <p className="eyebrow">
+            {site.identity.degree} · {site.identity.school} · {site.identity.year}
+          </p>
           <h1 id="hero-title" className="hero-section__title display">
             {site.headline}
           </h1>
           <p className="hero-section__tagline">{site.tagline}</p>
-          <p className="hero-section__meta mono">
-            {site.identity.year} · {site.identity.cohort} · {site.identity.focus}
-          </p>
           <Button href="#work" variant="solid" size="lg" iconAfter="↓">
             Explore my journey
           </Button>

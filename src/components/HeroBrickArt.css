@@ -13,8 +13,8 @@
 .hero-brick-art__piece--1 { animation-delay: 60ms; }
 .hero-brick-art__piece--2 { animation-delay: 180ms; }
 .hero-brick-art__piece--3 { animation-delay: 300ms; }
-.hero-brick-art__piece--4 { animation-delay: 220ms; }
-.hero-brick-art__piece--5 { animation-delay: 380ms; }
+/* The figure lands last, as if it steps in once the stack is built. */
+.hero-brick-art__piece--6 { animation-delay: 480ms; }
 
 @media (prefers-reduced-motion: reduce) {
   .hero-brick-art__piece {

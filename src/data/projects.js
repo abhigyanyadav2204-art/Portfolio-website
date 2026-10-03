@@ -1,3 +1,9 @@
+import handiFounders from "../assets/handi-founders.webp";
+import handiRenovation from "../assets/handi-renovation.webp";
+import handiBiryaniFire from "../assets/handi-biryani-fire.webp";
+import handiRestaurantEmpty from "../assets/handi-restaurant-empty.webp";
+import handiRestaurantFull from "../assets/handi-restaurant-full.webp";
+
 export const projects = {
   "handi-story": {
     order: 1,
@@ -27,6 +33,8 @@ export const projects = {
     sections: [
       {
         heading: "The idea",
+        image: handiFounders,
+        imageAlt: "Abhigyan with his two Handi Story co-founders on a hilltop.",
         paragraphs: [
           "In my second year of college, a friend from Hyderabad called me during semester break with an idea: start a cloud kitchen serving authentic Hyderabadi biryani in Imphal.",
 
@@ -47,6 +55,8 @@ export const projects = {
 
       {
         heading: "Building the operation",
+        image: handiRenovation,
+        imageAlt: "The team waterproofing and fitting out the rooftop space that would become the restaurant.",
         paragraphs: [
           "The first problem was finding someone who could actually make the biryani we wanted to sell.",
 
@@ -58,6 +68,8 @@ export const projects = {
 
       {
         heading: "Finding customers",
+        image: handiBiryaniFire,
+        imageAlt: "Handi over an open flame, mid-order, on the rooftop kitchen.",
         paragraphs: [
           "Once the kitchen was running, the next problem was getting people to buy from us.",
 
@@ -84,6 +96,8 @@ export const projects = {
 
       {
         heading: "From cloud kitchen to restaurant",
+        image: handiRestaurantEmpty,
+        imageAlt: "The finished restaurant space, set up with lighting and seating, before opening.",
         paragraphs: [
           "Over time, we realised the location we were operating from had more potential than we were using.",
 
@@ -95,6 +109,8 @@ export const projects = {
 
       {
         heading: "The outcome",
+        image: handiRestaurantFull,
+        imageAlt: "The restaurant full of customers on a busy evening.",
         paragraphs: [
           "In the first three months, we crossed ₹3 lakh in revenue and reached 50+ orders a day.",
 

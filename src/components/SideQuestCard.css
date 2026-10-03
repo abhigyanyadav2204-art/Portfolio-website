@@ -42,10 +42,18 @@
   margin-bottom: var(--sp-3);
 }
 
+/* Same reasoning as CaseSection's image: no fixed aspect-ratio/cover
+   crop. The real photos here range from square (Khatakhat) to tall
+   portrait (the drone build, phone-shot) to landscape (the hackathon
+   stage photo) — a uniform crop box would risk cutting off a face.
+   Capping max-height keeps the "parts tray" grid roughly tidy without
+   ever cropping; a tall source just sits narrower than the card. */
 .side-quest-card__image {
-  width: 100%;
-  aspect-ratio: 4 / 3;
-  object-fit: cover;
+  display: block;
+  width: auto;
+  max-width: 100%;
+  max-height: 18rem;
+  margin-inline: auto;
   border-radius: var(--r-sm);
   margin-bottom: var(--sp-4);
 }

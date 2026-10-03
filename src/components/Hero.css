@@ -46,13 +46,6 @@
   margin-bottom: var(--sp-4);
 }
 
-.hero-section__meta {
-  font-size: var(--fs-200);
-  color: var(--c-ink-faint);
-  margin-bottom: var(--sp-6);
-  text-transform: uppercase;
-}
-
 .hero-section__art {
   display: none;
 }

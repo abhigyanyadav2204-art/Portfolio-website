@@ -28,6 +28,20 @@ function ScrollToTop() {
   const { pathname, hash } = useLocation();
   const lastKey = useRef(null);
 
+  // The browser's own scroll restoration ("auto") fights this component:
+  // on a pushState navigation it can still reapply whatever scrollY the
+  // previous history entry happened to be at, racing our own
+  // window.scrollTo(0, 0) below and sometimes winning (the symptom was
+  // exactly this — open a case study, scroll partway down, click to the
+  // next one via CaseNav, and it would render already scrolled to that
+  // same position instead of the top). Switching to "manual" makes this
+  // component the only thing that ever moves scroll position.
+  useEffect(() => {
+    if ("scrollRestoration" in window.history) {
+      window.history.scrollRestoration = "manual";
+    }
+  }, []);
+
   useEffect(() => {
     const key = `${pathname}${hash}`;
     if (lastKey.current === key) return; // unchanged — real nav or a StrictMode replay
@@ -41,7 +55,12 @@ function ScrollToTop() {
       return;
     }
 
-    window.scrollTo(0, 0);
+    // Explicit `behavior: "instant"` rather than the bare (x, y) form:
+    // html has `scroll-behavior: smooth` globally (for anchor links), and
+    // that two-number form inherits it, animating the reset. A second
+    // quick navigation fired mid-animation could then land wherever the
+    // first scroll happened to be interrupted instead of at the top.
+    window.scrollTo({ top: 0, left: 0, behavior: "instant" });
     document.getElementById("main")?.focus();
   }, [pathname, hash]);
 

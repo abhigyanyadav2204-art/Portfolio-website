@@ -21,12 +21,15 @@ function CaseSection({ heading, paragraphs, image, imageAlt, index }) {
       </h2>
 
       {image && (
+        // No width/height attrs: these are real photos at varying native
+        // ratios (square, landscape, portrait — see CaseSection.css), so
+        // a single hardcoded box would misstate the aspect ratio for
+        // most of them and cause the layout-shift it's meant to prevent.
+        // They're below the fold and lazy-loaded, not LCP-critical.
         <img
           src={image}
           alt={imageAlt ?? ""}
           className="case-section__image"
-          width={1200}
-          height={800}
           loading="lazy"
           decoding="async"
           onError={(event) => {

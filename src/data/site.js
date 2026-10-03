@@ -68,7 +68,7 @@ export const site = {
   resume: {
     href: "/abhigyan-yadav-resume.pdf",
     filename: "abhigyan-yadav-resume.pdf",
-    ready: false,
+    ready: true,
   },
 
   meta: {

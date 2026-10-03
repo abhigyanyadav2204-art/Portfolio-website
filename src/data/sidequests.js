@@ -1,3 +1,6 @@
+import regenHackathon from "../assets/regen-hackathon.webp";
+import nidarDrone from "../assets/nidar-drone-build.webp";
+import khatakhatCart from "../assets/khatakhat-cart.webp";
 import sikkimRide from "../assets/sikkim-ride.webp";
 
 /**
@@ -13,6 +16,8 @@ export const sideQuests = [
     brick: { color: "var(--brick-azure)", ink: "var(--c-ink)", size: [1, 3] },
     blurb:
       "Sponsorship & Marketing Lead for a national hackathon. Managed sponsorship outreach and secured ₹1.3L in sponsorships through a combination of cash partnerships and brand visibility exchanges.",
+    image: regenHackathon,
+    imageAlt: "Abhigyan receiving a certificate of appreciation on stage at the ReGen Hackathon, NIT Manipur.",
   },
   {
     id: "nidar-drone",
@@ -22,6 +27,8 @@ export const sideQuests = [
     brick: { color: "var(--brick-slate)", ink: "var(--c-ink)", size: [1, 2] },
     blurb:
       "Worked on a disaster-management drone project, contributing to the computer vision side using YOLO.",
+    image: nidarDrone,
+    imageAlt: "Building and wiring the NIDAR drone's airframe.",
   },
   {
     id: "khatakhat",
@@ -31,6 +38,8 @@ export const sideQuests = [
     brick: { color: "var(--brick-green)", ink: "var(--c-ink)", size: [1, 2] },
     blurb:
       "Worked with an early-stage logistics and commerce venture around its social media and content.",
+    image: khatakhatCart,
+    imageAlt: "A Khatakhat-branded vegetable cart used for last-mile delivery.",
   },
   {
     // Carries the Himalaya photo previously (and inaccurately) used as

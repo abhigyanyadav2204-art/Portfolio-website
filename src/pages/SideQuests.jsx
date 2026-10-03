@@ -14,8 +14,8 @@ function SideQuests() {
           <SectionHead
             as="h1"
             eyebrow="Side quests"
-            title="Things I've worked on along the way."
-            lede="Smaller projects, experiments and experiences that don't belong in the main body of my work, but still shaped how I think and work."
+            title="Things that didn't make the main story."
+            lede="Smaller projects and experiments that shaped how I think and work, even without a case study of their own."
           />
 
           <div className="side-quests-tray">

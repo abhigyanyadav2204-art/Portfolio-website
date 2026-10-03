@@ -54,8 +54,8 @@ function Home() {
           <SectionHead
             id="sidequests-title"
             eyebrow="Along the way"
-            title="A few other things happened along the way."
-            lede="Hackathons, drones, startups, motorcycles and other things I've ended up doing."
+            title="Not everything fits in a case study."
+            lede="A hackathon, a drone build, a vegetable cart, a ride to 17,800 ft — smaller things that still shaped how I think and work."
           />
           <Button to="/sidequests" variant="outline" iconAfter="→">
             Explore side quests

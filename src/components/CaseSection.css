@@ -11,11 +11,21 @@
   margin-bottom: var(--sp-4);
 }
 
+/* Deliberately no aspect-ratio/object-fit:cover here. These are real
+   candid photos at varying native ratios (square founders portrait,
+   landscape renovation shot, portrait restaurant interiors) — a fixed
+   crop box would mean guessing at a center-crop and risking cutting
+   off a face or the subject the section is actually about. Capping
+   max-height and letting width/height scale together preserves the
+   whole photo; a very tall source just renders narrower than the
+   column instead of losing content off the top or bottom. */
 .case-section__image {
-  width: 100%;
-  aspect-ratio: 3 / 2;
-  object-fit: cover;
-  border-radius: var(--r-md);
+  display: block;
+  width: auto;
+  max-width: 100%;
+  max-height: 32rem;
+  margin-inline: auto;
   margin-bottom: var(--sp-5);
+  border-radius: var(--r-md);
   background: var(--c-field-raised); /* visible while loading, or if onError hides it */
 }
