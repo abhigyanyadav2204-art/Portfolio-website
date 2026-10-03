@@ -29,16 +29,19 @@ function Home() {
             />
             <div className="prose">
               <p>
-                I'm Abhigyan. I like building things from scratch.
+                I didn't set out to do product. I set out to solve operational
+                problems, and kept landing on the same question: why does a real
+                person adopt this, get stuck, or walk away?
               </p>
               <p>
-                I've built a food business, grown a content brand, worked on a
-                marketplace for street vendors, and I'm now building communities
-                around people who want to build.
+                Running a food business, growing a content brand, and onboarding
+                vendors onto a marketplace all came down to the same thing —
+                watching real behavior change, or not, and figuring out why.
               </p>
               <p>
-                I work across product, growth and operations, getting close to the
-                problem, figuring out what matters, and making things happen.
+                That's the habit I want to bring into product management. Not the
+                title, but the instinct of getting close enough to a problem to
+                understand why it's actually happening.
               </p>
               <p>
                 If you're building something interesting,{" "}
@@ -59,7 +62,7 @@ function Home() {
             id="sidequests-title"
             eyebrow="Along the way"
             title="Not everything fits in a case study."
-            lede="A hackathon, a drone build, a vegetable cart, a ride to 17,800 ft. Smaller things that still shaped how I think and work."
+            lede="A hackathon, a drone build, a delivery cart, a ride to 17,800 ft. Smaller things that still shaped how I think and work."
           />
           <Button to="/sidequests" variant="outline" iconAfter="→">
             Explore side quests

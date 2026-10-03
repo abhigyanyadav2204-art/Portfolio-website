@@ -86,7 +86,8 @@ function SiteHeader() {
             size="md"
             className="site-header__resume"
             onClick={closeMenu}
-            download={site.resume.ready ? site.resume.filename : undefined}
+            target={site.resume.ready ? "_blank" : undefined}
+            rel={site.resume.ready ? "noreferrer" : undefined}
           >
             Resume
             {!site.resume.ready && <span className="sr-only"> — coming soon</span>}

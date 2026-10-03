@@ -9,9 +9,9 @@ function BrickStack({ projects, id }) {
       <div className="container">
         <SectionHead
           id="journey-title"
-          eyebrow="The journey so far"
+          eyebrow="What the work proves"
           title="I didn't start with product. I started by trying to make something work."
-          lede="That became a series of businesses, experiments and problems worth getting close to."
+          lede="Four ventures. Each one forced the same question: why do people adopt, stall, or leave — and what do you do about it."
         />
 
         <div className="brick-stack">

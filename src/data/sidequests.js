@@ -39,7 +39,7 @@ export const sideQuests = [
     blurb:
       "Led the social media campaign for an early-stage logistics startup, crossing 50K+ views on short-form content and 200K+ monthly interactions.",
     image: khatakhatCart,
-    imageAlt: "A Khatakhat-branded vegetable cart used for last-mile delivery.",
+    imageAlt: "A Khatakhat-branded delivery cart used for last-mile logistics.",
   },
   {
     // Carries the Himalaya photo previously (and inaccurately) used as

@@ -8,10 +8,11 @@ export const site = {
   name: "Abhigyan Yadav",
   wordmark: "ABHIGYAN",
 
-  headline: "I BUILD THINGS.",
+  headline: "I LEARNED PRODUCT ON THE GROUND.",
   tagline:
-    "I work at the intersection of product and operations. " +
-    "Getting close to problems, figuring out what needs to happen, and making it happen.",
+    "Three ventures in operations and growth taught me how people actually adopt " +
+    "something, where they get stuck, and what has to change before it works. " +
+    "I'm looking to bring that into product.",
 
   // NIT Manipur identity — nothing on the site said this before.
   identity: {
@@ -27,7 +28,7 @@ export const site = {
     { k: "Grad", v: "NIT Manipur · Class of 2027" },
     { k: "Degree", v: "B.Tech, Mechanical Engineering" },
     { k: "Based in", v: "Imphal, Manipur" },
-    { k: "Open to", v: "Product & operations roles" },
+    { k: "Open to", v: "Product management roles" },
   ],
 
   // `href` targets are rooted at "/#..." rather than a bare hash so they
@@ -71,10 +72,11 @@ export const site = {
   },
 
   meta: {
-    title: "Abhigyan Yadav | Product & Operations",
+    title: "Abhigyan Yadav | Product Management",
     description:
       "Final-year B.Tech Mechanical Engineering student at NIT Manipur. " +
-      "I build businesses, products and communities, working across product and operations.",
+      "Learning product management from the ground up — through operations and growth work " +
+      "where I had to understand why people adopt, stall, or leave.",
     url: "https://abhigyan.vercel.app",
     ogImage: "/og.png",
   },

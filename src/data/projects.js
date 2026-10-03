@@ -13,12 +13,12 @@ export const projects = {
   "handi-story": {
     order: 1,
     status: "active",
-    tagline: "Three students, one cloud kitchen, one real restaurant.",
+    tagline: "Built the ops. Learned why customers actually come back.",
     brick: { color: "var(--brick-red)", ink: "var(--c-ink)", size: [2, 4] },
     links: [],
 
     title: "The Handi Story",
-    eyebrow: "BUSINESS · OPERATIONS · GROWTH",
+    eyebrow: "DEMAND · RETENTION · CUSTOMER BEHAVIOR",
     role: "Co-Founder",
     timeline: "2024 — Present",
     intro:
@@ -128,12 +128,12 @@ export const projects = {
   "laarikhojo": {
   order: 3,
   status: "shipped",
-  tagline: "Discovery for the vendors no app had indexed.",
+  tagline: "700+ vendors onboarded. The real work was earning trust, not shipping features.",
   brick: { color: "var(--brick-green)", ink: "var(--c-ink)", size: [2, 6] },
   links: [],
 
   title: "LaariKhojo",
-  eyebrow: "PRODUCT · OPERATIONS · DEVELOPMENT",
+  eyebrow: "ONBOARDING · TRUST · ADOPTION",
   role: "Operations Intern · Cibos",
   timeline: "Jun 2026 — Aug 2026",
   intro:
@@ -251,12 +251,12 @@ export const projects = {
   "benzene": {
   order: 2,
   status: "active",
-  tagline: "A personal brand built from zero, in public.",
+  tagline: "Grew an audience from zero — one long experiment in what earns attention.",
   brick: { color: "var(--brick-azure)", ink: "var(--c-ink)", size: [2, 3] },
   links: [],
 
   title: "Benzene",
-  eyebrow: "CONTENT · GROWTH · COMMUNITY",
+  eyebrow: "AUDIENCE · DISTRIBUTION · ATTENTION",
   role: "Founder",
   timeline: "2024 — Present",
   intro:
@@ -315,12 +315,12 @@ export const projects = {
   "meet-ups": {
   order: 4,
   status: "active",
-  tagline: "Finding the right people to build with.",
+  tagline: "80+ interviews before writing a line of product.",
   brick: { color: "var(--brick-orange)", ink: "var(--c-ink-invert)", size: [1, 4] },
   links: [],
 
   title: "Meet Ups",
-  eyebrow: "COMMUNITY · RESEARCH · PRODUCT",
+  eyebrow: "DISCOVERY · VALIDATION · PRODUCT",
   role: "Founder",
   timeline: "2025 — Present",
   intro:

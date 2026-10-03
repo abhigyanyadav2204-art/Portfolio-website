@@ -23,7 +23,8 @@ function ContactPlate({ links, resume }) {
           pending={!resume.ready}
           variant="solid"
           size="lg"
-          download={resume.ready ? resume.filename : undefined}
+          target={resume.ready ? "_blank" : undefined}
+          rel={resume.ready ? "noreferrer" : undefined}
         >
           Résumé
           {!resume.ready && <span className="sr-only"> — coming soon</span>}
