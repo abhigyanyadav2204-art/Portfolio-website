@@ -26,6 +26,11 @@
 }
 
 .brick-card__title {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  column-gap: var(--sp-3);
+  row-gap: var(--sp-1);
   font-family: var(--font-display);
   font-size: var(--fs-700);
   line-height: var(--lh-tight);
@@ -36,6 +41,40 @@
 
 .brick-card__link {
   color: var(--brick-ink);
+}
+
+/* The nav promises a "Now" link — this is what makes good on it: the
+   one brick it points to visibly reads as current, not just another
+   item in the stack. */
+.brick-card__now {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--font-mono);
+  font-size: var(--fs-200);
+  font-weight: 700;
+  letter-spacing: var(--tr-eyebrow);
+  text-transform: uppercase;
+  color: var(--brick-ink);
+}
+
+.brick-card__now-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: currentColor;
+  animation: brick-card-now-pulse 1.8s ease-in-out infinite;
+}
+
+@keyframes brick-card-now-pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.4; transform: scale(0.8); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .brick-card__now-dot {
+    animation: none;
+  }
 }
 
 /* The full-card hit area. Positioned on the link so the accessible

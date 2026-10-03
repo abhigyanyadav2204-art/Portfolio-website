@@ -10,7 +10,7 @@ export const site = {
 
   headline: "I BUILD THINGS.",
   tagline:
-    "I work at the intersection of product, operations, growth and technology. " +
+    "I work at the intersection of product and operations. " +
     "Getting close to problems, figuring out what needs to happen, and making it happen.",
 
   // NIT Manipur identity — nothing on the site said this before.
@@ -25,10 +25,9 @@ export const site = {
 
   spec: [
     { k: "School", v: "NIT Manipur · Class of 2027" },
-    { k: "Degree", v: "B.Tech, Mechanical Engineering (final year)" },
-    { k: "Drawn to", v: "Products — building, growth, operations" },
+    { k: "Degree", v: "B.Tech, Mechanical Engineering" },
     { k: "Based in", v: "Imphal, Manipur" },
-    { k: "Open to", v: "Product / growth / ops roles & internships" },
+    { k: "Open to", v: "Product & operations roles" },
   ],
 
   // `href` targets are rooted at "/#..." rather than a bare hash so they

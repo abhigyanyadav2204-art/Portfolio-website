@@ -46,14 +46,15 @@
   margin-bottom: var(--sp-4);
 }
 
-.hero-section__art {
+.hero-section__art-group {
   display: none;
 }
 
 @media (min-width: 64rem) {
-  /* Switches to a grid only here, where StudRail and .hero-section__art
-     are both genuinely present — the mismatch that caused the mobile
-     overflow doesn't exist at this breakpoint. */
+  /* Switches to a grid only here, where StudRail and
+     .hero-section__art-group are both genuinely present — the
+     mismatch that caused the mobile overflow doesn't exist at this
+     breakpoint. */
   .hero-section__inner {
     display: grid;
     grid-template-columns: auto 1fr auto;
@@ -65,11 +66,37 @@
     grid-column: 2;
   }
 
-  .hero-section__art {
-    display: block;
+  .hero-section__art-group {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: var(--sp-4);
     grid-column: 3;
     grid-row: 1;
     max-width: 280px;
-    justify-self: end;
+  }
+
+  .hero-section__art {
+    width: 100%;
+    max-width: 220px;
+  }
+
+  /* A still from The Lego Batman Movie, cropped to drop the blurry
+     foreground clutter. Sits as its own photo tile below the brick
+     stack rather than forced into the SVG's coordinate system — its
+     native ratio is landscape, nothing like the brick cluster's. */
+  .hero-section__batman {
+    width: 100%;
+    border-radius: var(--r-md);
+    box-shadow: var(--sh-cast-md);
+    opacity: 0;
+    animation: brick-settle var(--dur-5) var(--ease-snap) 420ms both;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .hero-section__batman {
+      opacity: 1;
+      animation: none;
+    }
   }
 }

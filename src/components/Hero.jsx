@@ -2,6 +2,7 @@ import { site } from "../data/site.js";
 import HeroBrickArt from "./HeroBrickArt.jsx";
 import StudRail from "./StudRail.jsx";
 import Button from "./Button.jsx";
+import batmanFigure from "../assets/batman-figure.webp";
 import "./Hero.css";
 
 /**
@@ -32,7 +33,17 @@ function Hero() {
           </Button>
         </div>
 
-        <HeroBrickArt className="hero-section__art" />
+        <div className="hero-section__art-group">
+          <HeroBrickArt className="hero-section__art" />
+          <img
+            src={batmanFigure}
+            alt=""
+            aria-hidden="true"
+            className="hero-section__batman"
+            loading="lazy"
+            decoding="async"
+          />
+        </div>
       </div>
     </section>
   );

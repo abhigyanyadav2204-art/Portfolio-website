@@ -15,7 +15,7 @@ export const sideQuests = [
     role: "Sponsorship & Marketing Lead",
     brick: { color: "var(--brick-azure)", ink: "var(--c-ink)", size: [1, 3] },
     blurb:
-      "Sponsorship & Marketing Lead for a national hackathon. Managed sponsorship outreach and secured ₹1.3L in sponsorships through a combination of cash partnerships and brand visibility exchanges.",
+      "Solo-led sponsorship outreach for a national hackathon, securing ₹1.3L in sponsorships through a mix of cash partnerships and brand visibility exchanges.",
     image: regenHackathon,
     imageAlt: "Abhigyan receiving a certificate of appreciation on stage at the ReGen Hackathon, NIT Manipur.",
   },
@@ -26,7 +26,7 @@ export const sideQuests = [
     role: "Computer vision",
     brick: { color: "var(--brick-slate)", ink: "var(--c-ink)", size: [1, 2] },
     blurb:
-      "Worked on a disaster-management drone project, contributing to the computer vision side using YOLO.",
+      "Participated in the NIDAR Drone Challenge, building a disaster-management drone and contributing to its computer vision side using YOLO.",
     image: nidarDrone,
     imageAlt: "Building and wiring the NIDAR drone's airframe.",
   },
@@ -37,7 +37,7 @@ export const sideQuests = [
     role: "Social & content",
     brick: { color: "var(--brick-green)", ink: "var(--c-ink)", size: [1, 2] },
     blurb:
-      "Worked with an early-stage logistics and commerce venture around its social media and content.",
+      "Led the social media campaign for an early-stage logistics startup, crossing 50K+ views on short-form content and 200K+ monthly interactions.",
     image: khatakhatCart,
     imageAlt: "A Khatakhat-branded vegetable cart used for last-mile delivery.",
   },

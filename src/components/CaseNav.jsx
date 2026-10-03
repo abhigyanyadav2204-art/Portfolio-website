@@ -1,10 +1,13 @@
 import { Link } from "react-router-dom";
 import "./CaseNav.css";
 
-/** Previous/next case-study links at the bottom of a project page. */
+/**
+ * Previous/next case-study links at the bottom of a project page. The
+ * last project in order has no `next` — rather than leave that slot
+ * blank (a dead end after the final case study), it loops back to the
+ * work section instead of just trailing off.
+ */
 function CaseNav({ prev, next }) {
-  if (!prev && !next) return null;
-
   return (
     <nav className="case-nav" aria-label="More case studies">
       {prev ? (
@@ -22,7 +25,10 @@ function CaseNav({ prev, next }) {
           <span className="case-nav__title">{next.title}</span>
         </Link>
       ) : (
-        <span aria-hidden="true" />
+        <Link to="/#work" className="case-nav__link case-nav__link--next">
+          <span className="mono">Next →</span>
+          <span className="case-nav__title">Back to all work</span>
+        </Link>
       )}
     </nav>
   );

@@ -3,6 +3,11 @@ import handiRenovation from "../assets/handi-renovation.webp";
 import handiBiryaniFire from "../assets/handi-biryani-fire.webp";
 import handiRestaurantEmpty from "../assets/handi-restaurant-empty.webp";
 import handiRestaurantFull from "../assets/handi-restaurant-full.webp";
+import laarikhojoMap from "../assets/laarikhojo-map.webp";
+import laarikhojoVendorCard from "../assets/laarikhojo-vendor-card.webp";
+import laarikhojoTiffinCard from "../assets/laarikhojo-tiffin-card.webp";
+import laarikhojoAaharBazar from "../assets/laarikhojo-aahar-bazar.webp";
+import laarikhojoFlyer from "../assets/laarikhojo-flyer.webp";
 
 export const projects = {
   "handi-story": {
@@ -159,6 +164,8 @@ export const projects = {
 
     {
       heading: "The marketplace I didn't know I was joining",
+      image: laarikhojoMap,
+      imageAlt: "The live LaariKhojo map, showing vendor and tiffin-maker pins clustered across Ahmedabad.",
       paragraphs: [
         "LaariKhojo was being built around a simple question: If Zomato helps you discover restaurants, how do you discover the street food vendors and tiffin makers around you?",
 
@@ -170,6 +177,8 @@ export const projects = {
 
     {
       heading: "The real problem was trust",
+      image: laarikhojoVendorCard,
+      imageAlt: "A vendor's live listing on LaariKhojo — the pin a vendor would see appear after onboarding.",
       paragraphs: [
         "The technical problem was probably the easier one.",
 
@@ -183,6 +192,8 @@ export const projects = {
 
     {
       heading: "Two businesses. Two different problems.",
+      image: laarikhojoTiffinCard,
+      imageAlt: "Kusum Tiffin Service's listing — meal timings and service areas, the kind of detail a tiffin maker needs that a street vendor doesn't.",
       paragraphs: [
         "A street vendor and a tiffin maker may both sell food, but their businesses operate very differently.",
 
@@ -205,6 +216,8 @@ export const projects = {
 
     {
       heading: "Aahar Bazar",
+      image: laarikhojoAaharBazar,
+      imageAlt: "The LaariKhojo team and fellow founders at Aahar Bazar.",
       paragraphs: [
         "The work eventually took LaariKhojo beyond the website and into the field in another way.",
 
@@ -218,6 +231,8 @@ export const projects = {
 
     {
       heading: "The outcome",
+      image: laarikhojoFlyer,
+      imageAlt: "A LaariKhojo one-pager with onboarding stats: 551 vendors onboarded, 200+ active weekly, 400+ weekly users.",
       paragraphs: [
         "I started with a clear operations target. I ended up working across operations, development, product and UX.",
 
@@ -305,7 +320,12 @@ export const projects = {
   intro:
     "An attempt to solve a problem I kept seeing in college: students finding the right people to learn, build and collaborate with.",
 
-  metrics: [],
+  metrics: [
+    {
+      value: "80+",
+      label: "User interviews conducted",
+    },
+  ],
 
   sections: [
     {

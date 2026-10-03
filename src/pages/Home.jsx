@@ -28,19 +28,26 @@ function Home() {
             />
             <div className="prose">
               <p>
-                I've built a business from scratch, worked on a marketplace with street vendors,
-                built a personal brand from zero, and worked across growth, operations and sales.
+                I'm a final-year Mechanical Engineering student at NIT Manipur who keeps
+                ending up in product and operations — not because I planned it, but
+                because that's where the real problems were. I've built a food business
+                from scratch, run operations for a street-vendor marketplace, and grown a
+                personal brand to hundreds of thousands of views.
               </p>
               <p>
-                I don't usually start with a fixed role. I start with the problem, understand what
-                is actually happening, figure out what matters, and then do whatever is needed to
-                move it forward.
-              </p>
-              <p>
-                I'm taking that approach further by going deeper into development and AI, so I can
-                move more directly from understanding a problem to building the solution.
+                I start with the problem, figure out what's actually happening, and do
+                whatever's needed to move it forward. I'm going deeper into development
+                and AI now, so I can do more of that building myself.
               </p>
             </div>
+            <Button
+              to="/#contact"
+              variant="outline"
+              iconAfter="→"
+              className="about-section__cta"
+            >
+              Hiring for product or ops? Let's talk
+            </Button>
           </div>
 
           <SpecPanel items={site.spec} />

@@ -37,6 +37,12 @@ function BrickCard({ project, index, anchorId }) {
               {project.title}
               <span className="sr-only"> — read the case study</span>
             </Link>
+            {anchorId === "now" && (
+              <span className="brick-card__now">
+                <span className="brick-card__now-dot" aria-hidden="true" />
+                Now
+              </span>
+            )}
           </h3>
 
           <p className="brick-card__tagline">{project.tagline}</p>
