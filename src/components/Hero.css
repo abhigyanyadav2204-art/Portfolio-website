@@ -39,6 +39,19 @@
   color: var(--c-ink);
 }
 
+/* --fs-900's vw-driven value outgrows the copy column faster than the
+   column itself widens between 320-767px (block layout, no art-group
+   to share space with), so a long single word in the headline overflows
+   past the column and is silently clipped by an ancestor rather than
+   causing page scroll. Measured per-breakpoint against the column's
+   actual width rather than guessed: fits 320-767px with margin, and
+   hands off to --fs-900 at 768px within ~0.3px of its existing value. */
+@media (max-width: 767px) {
+  .hero-section__title {
+    font-size: clamp(2rem, -0.37rem + 12.8vw, 5.4rem);
+  }
+}
+
 .hero-section__tagline {
   font-size: var(--fs-500);
   color: var(--c-ink-dim);

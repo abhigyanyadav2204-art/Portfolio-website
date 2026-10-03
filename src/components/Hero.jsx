@@ -19,9 +19,6 @@ function Hero() {
         <StudRail />
 
         <div className="hero-section__copy">
-          <p className="eyebrow">
-            {site.identity.degree} · {site.identity.school} · {site.identity.year}
-          </p>
           <h1 id="hero-title" className="hero-section__title display">
             {site.headline}
           </h1>

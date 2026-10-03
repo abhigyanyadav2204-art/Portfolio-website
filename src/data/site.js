@@ -8,11 +8,10 @@ export const site = {
   name: "Abhigyan Yadav",
   wordmark: "ABHIGYAN",
 
-  headline: "I LEARNED PRODUCT ON THE GROUND.",
+  headline: "I RAN OPERATIONS. I THINK IN PRODUCT.",
   tagline:
-    "Three ventures in operations and growth taught me how people actually adopt " +
-    "something, where they get stuck, and what has to change before it works. " +
-    "I'm looking to bring that into product.",
+    "From running a food business to onboarding 700+ vendors, I've learned to " +
+    "understand what gets people to adopt, struggle with, and trust a product.",
 
   // NIT Manipur identity — nothing on the site said this before.
   identity: {

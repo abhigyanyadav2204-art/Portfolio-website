@@ -13,7 +13,7 @@ export const projects = {
   "handi-story": {
     order: 1,
     status: "active",
-    tagline: "Built the ops. Learned why customers actually come back.",
+    tagline: "A Hyderabadi biryani cloud kitchen, co-founded in college, that grew into a real restaurant.",
     brick: { color: "var(--brick-red)", ink: "var(--c-ink)", size: [2, 4] },
     links: [],
 
@@ -128,7 +128,7 @@ export const projects = {
   "laarikhojo": {
   order: 3,
   status: "shipped",
-  tagline: "700+ vendors onboarded. The real work was earning trust, not shipping features.",
+  tagline: "A discovery marketplace for street vendors and tiffin makers, built during an operations internship.",
   brick: { color: "var(--brick-green)", ink: "var(--c-ink)", size: [2, 6] },
   links: [],
 
@@ -251,7 +251,7 @@ export const projects = {
   "benzene": {
   order: 2,
   status: "active",
-  tagline: "Grew an audience from zero — one long experiment in what earns attention.",
+  tagline: "A personal content brand and growth experiment, built from zero.",
   brick: { color: "var(--brick-azure)", ink: "var(--c-ink)", size: [2, 3] },
   links: [],
 
@@ -315,7 +315,7 @@ export const projects = {
   "meet-ups": {
   order: 4,
   status: "active",
-  tagline: "80+ interviews before writing a line of product.",
+  tagline: "An early-stage product helping students find the right people to build with.",
   brick: { color: "var(--brick-orange)", ink: "var(--c-ink-invert)", size: [1, 4] },
   links: [],
 

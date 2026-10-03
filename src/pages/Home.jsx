@@ -30,18 +30,20 @@ function Home() {
             <div className="prose">
               <p>
                 I didn't set out to do product. I set out to solve operational
-                problems, and kept landing on the same question: why does a real
+                problems — and kept landing on the same question: why does a real
                 person adopt this, get stuck, or walk away?
               </p>
               <p>
-                Running a food business, growing a content brand, and onboarding
-                vendors onto a marketplace all came down to the same thing —
-                watching real behavior change, or not, and figuring out why.
+                A food business taught me that demand isn't something you assume,
+                it's something you test. A vendor marketplace taught me that the
+                technical build is the easy half — earning trust is the hard one.
+                A community project taught me to run 80+ interviews before writing
+                a single line of product.
               </p>
               <p>
-                That's the habit I want to bring into product management. Not the
-                title, but the instinct of getting close enough to a problem to
-                understand why it's actually happening.
+                None of that came with a PM title. But it's the same muscle: get
+                close enough to a problem to see why it's actually happening,
+                before you decide what to build.
               </p>
               <p>
                 If you're building something interesting,{" "}
