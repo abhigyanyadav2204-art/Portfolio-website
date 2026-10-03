@@ -1,5 +1,4 @@
 import { site } from "../data/site.js";
-import HeroBrickArt from "./HeroBrickArt.jsx";
 import StudRail from "./StudRail.jsx";
 import Button from "./Button.jsx";
 import batmanFigure from "../assets/batman-figure.webp";
@@ -9,8 +8,7 @@ import "./Hero.css";
  * Replaces the old full-bleed photo hero. That photo (a) wasn't a
  * workspace at all — it was a Himalaya trip photo mislabelled by its
  * own alt text — and (b) was 2.32MB fighting a black/yellow palette
- * with blue sky and snow. CSS/SVG brick art costs nothing to load and
- * is what the rest of the site is built from anyway.
+ * with blue sky and snow.
  */
 function Hero() {
   return (
@@ -34,7 +32,6 @@ function Hero() {
         </div>
 
         <div className="hero-section__art-group">
-          <HeroBrickArt className="hero-section__art" />
           <img
             src={batmanFigure}
             alt=""

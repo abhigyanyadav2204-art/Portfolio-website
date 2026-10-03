@@ -24,7 +24,7 @@ export const site = {
   },
 
   spec: [
-    { k: "School", v: "NIT Manipur · Class of 2027" },
+    { k: "Grad", v: "NIT Manipur · Class of 2027" },
     { k: "Degree", v: "B.Tech, Mechanical Engineering" },
     { k: "Based in", v: "Imphal, Manipur" },
     { k: "Open to", v: "Product & operations roles" },
@@ -71,10 +71,10 @@ export const site = {
   },
 
   meta: {
-    title: "Abhigyan Yadav — Product, Operations & Growth",
+    title: "Abhigyan Yadav | Product & Operations",
     description:
-      "Final-year B.Tech Mechanical Engineering student at NIT Manipur (Class of 2027). " +
-      "I build businesses, products and audiences — operations, growth and product work, up close.",
+      "Final-year B.Tech Mechanical Engineering student at NIT Manipur. " +
+      "I build businesses, products and communities, working across product and operations.",
     url: "https://abhigyan.vercel.app",
     ogImage: "/og.png",
   },

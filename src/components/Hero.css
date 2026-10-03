@@ -16,9 +16,9 @@
 }
 
 /* Block layout below 64rem — deliberately NOT a grid here. StudRail and
-   .hero-section__art are both display:none at this width, and a grid
-   with an empty "auto" track still reserves its gap next to that track,
-   while the lone remaining item (.hero-section__copy, pinned to
+   .hero-section__art-group are both display:none at this width, and a
+   grid with an empty "auto" track still reserves its gap next to that
+   track, while the lone remaining item (.hero-section__copy, pinned to
    "grid-column: 2") get constrained against a track-sizing calculation
    that assumes a sibling is occupying column 1. That combination pushed
    the copy block further right than the container's own padding and
@@ -68,29 +68,22 @@
 
   .hero-section__art-group {
     display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    gap: var(--sp-4);
     grid-column: 3;
     grid-row: 1;
-    max-width: 280px;
+    max-width: 320px;
   }
 
-  .hero-section__art {
-    width: 100%;
-    max-width: 220px;
-  }
-
-  /* A still from The Lego Batman Movie, cropped to drop the blurry
-     foreground clutter. Sits as its own photo tile below the brick
-     stack rather than forced into the SVG's coordinate system — its
-     native ratio is landscape, nothing like the brick cluster's. */
+  /* A still from The Lego Batman Movie, cropped to drop a thin shadow
+     at the bottom edge. Its own brick-stud wall background stands in
+     for the illustrated bricks this slot used to carry — pairing it
+     with a second, separately-drawn brick cluster just duplicated the
+     motif, so this photo is the only thing here now. */
   .hero-section__batman {
     width: 100%;
     border-radius: var(--r-md);
     box-shadow: var(--sh-cast-md);
     opacity: 0;
-    animation: brick-settle var(--dur-5) var(--ease-snap) 420ms both;
+    animation: brick-settle var(--dur-5) var(--ease-snap) 200ms both;
   }
 
   @media (prefers-reduced-motion: reduce) {

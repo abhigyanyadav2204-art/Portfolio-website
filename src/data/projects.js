@@ -153,6 +153,8 @@ export const projects = {
   sections: [
     {
       heading: "The assignment",
+      image: laarikhojoFlyer,
+      imageAlt: "A LaariKhojo one-pager with onboarding stats: 551 vendors onboarded, 200+ active weekly, 400+ weekly users.",
       paragraphs: [
         "In 2026, I joined Cibos, a startup working on clean cooking solutions for households and grassroots food businesses, as an Operations Intern.",
 
@@ -177,8 +179,6 @@ export const projects = {
 
     {
       heading: "The real problem was trust",
-      image: laarikhojoVendorCard,
-      imageAlt: "A vendor's live listing on LaariKhojo — the pin a vendor would see appear after onboarding.",
       paragraphs: [
         "The technical problem was probably the easier one.",
 
@@ -192,8 +192,16 @@ export const projects = {
 
     {
       heading: "Two businesses. Two different problems.",
-      image: laarikhojoTiffinCard,
-      imageAlt: "Kusum Tiffin Service's listing — meal timings and service areas, the kind of detail a tiffin maker needs that a street vendor doesn't.",
+      images: [
+        {
+          src: laarikhojoVendorCard,
+          alt: "Shree Nikunj Frankie Centre's listing — a street-food vendor's live LaariKhojo pin.",
+        },
+        {
+          src: laarikhojoTiffinCard,
+          alt: "Kusum Tiffin Service's listing — meal timings and service areas, the kind of detail a tiffin maker needs that a street vendor doesn't.",
+        },
+      ],
       paragraphs: [
         "A street vendor and a tiffin maker may both sell food, but their businesses operate very differently.",
 
@@ -231,8 +239,6 @@ export const projects = {
 
     {
       heading: "The outcome",
-      image: laarikhojoFlyer,
-      imageAlt: "A LaariKhojo one-pager with onboarding stats: 551 vendors onboarded, 200+ active weekly, 400+ weekly users.",
       paragraphs: [
         "I started with a clear operations target. I ended up working across operations, development, product and UX.",
 

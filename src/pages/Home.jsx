@@ -28,16 +28,16 @@ function Home() {
             />
             <div className="prose">
               <p>
-                I'm a final-year Mechanical Engineering student at NIT Manipur who keeps
-                ending up in product and operations — not because I planned it, but
-                because that's where the real problems were. I've built a food business
-                from scratch, run operations for a street-vendor marketplace, and grown a
-                personal brand to hundreds of thousands of views.
+                I'm Abhigyan. I like building things from scratch.
               </p>
               <p>
-                I start with the problem, figure out what's actually happening, and do
-                whatever's needed to move it forward. I'm going deeper into development
-                and AI now, so I can do more of that building myself.
+                I've built a food business, grown a content brand, worked on a
+                marketplace for street vendors, and I'm now building communities
+                around people who want to build.
+              </p>
+              <p>
+                I work across product, growth and operations, getting close to the
+                problem, figuring out what matters, and making things happen.
               </p>
             </div>
             <Button
@@ -46,7 +46,7 @@ function Home() {
               iconAfter="→"
               className="about-section__cta"
             >
-              Hiring for product or ops? Let's talk
+              If you're building something interesting, let's talk
             </Button>
           </div>
 
@@ -62,7 +62,7 @@ function Home() {
             id="sidequests-title"
             eyebrow="Along the way"
             title="Not everything fits in a case study."
-            lede="A hackathon, a drone build, a vegetable cart, a ride to 17,800 ft — smaller things that still shaped how I think and work."
+            lede="A hackathon, a drone build, a vegetable cart, a ride to 17,800 ft. Smaller things that still shaped how I think and work."
           />
           <Button to="/sidequests" variant="outline" iconAfter="→">
             Explore side quests

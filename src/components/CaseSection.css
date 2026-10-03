@@ -29,3 +29,22 @@
   border-radius: var(--r-md);
   background: var(--c-field-raised); /* visible while loading, or if onError hides it */
 }
+
+/* The narrow exception mentioned in CaseSection.jsx: two images side
+   by side for a direct comparison. Wraps to stacked on narrow screens
+   via flex-wrap rather than a breakpoint, since the trigger is
+   available width, not viewport size specifically. */
+.case-section__image-pair {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--sp-4);
+  margin-bottom: var(--sp-5);
+}
+
+.case-section__image--paired {
+  flex: 1 1 14rem;
+  max-width: 18rem;
+  max-height: 22rem;
+  margin-bottom: 0;
+}
