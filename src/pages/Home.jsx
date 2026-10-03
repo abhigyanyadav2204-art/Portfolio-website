@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { projectList } from "../data/projects";
 import { site } from "../data/site.js";
 import Hero from "../components/Hero.jsx";
@@ -39,15 +40,11 @@ function Home() {
                 I work across product, growth and operations, getting close to the
                 problem, figuring out what matters, and making things happen.
               </p>
+              <p>
+                If you're building something interesting,{" "}
+                <Link to="/#contact">let's talk →</Link>
+              </p>
             </div>
-            <Button
-              to="/#contact"
-              variant="outline"
-              iconAfter="→"
-              className="about-section__cta"
-            >
-              If you're building something interesting, let's talk
-            </Button>
           </div>
 
           <SpecPanel items={site.spec} />
