@@ -3,26 +3,39 @@
   padding-top: calc(var(--brick-pad) + var(--stud-lip));
 }
 
-.brick-card__top {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: var(--sp-3);
-  margin-bottom: var(--sp-4);
+/* The feature/open tiers span both grid columns but keep a prose-width
+   text column — the extra width buys breathing room and (for feature)
+   a photo, never a wider measure to read. */
+.brick-card--feature .brick-card__face,
+.brick-card--open .brick-card__face {
+  max-width: 42rem;
 }
 
+/* No top padding compensation needed here: the teaser photo already
+   separates the studs from the face. */
+.brick-card--feature .brick-card__face {
+  padding-top: var(--brick-pad);
+}
+
+.brick-card__photo {
+  display: block;
+  width: 100%;
+  max-height: 20rem;
+  object-fit: cover;
+  margin-top: calc(-1 * var(--stud-lip));
+}
+
+/* Full --brick-ink, not dimmed: on the red/azure/green bricks, body
+   text contrast against the face is already under 4.5:1 even at full
+   opacity (measured 4.00-4.42:1) — any transparency only pushes it
+   further from AA. --brick-ink is chosen per brick for safety already
+   (c-ink-invert on orange); dimming it was undoing that, for a visual
+   effect that cost accessibility without buying much distinction. */
 .brick-card__timeline {
-  color: color-mix(in srgb, var(--brick-ink), transparent 25%);
+  display: block;
+  color: var(--brick-ink);
   font-size: var(--fs-200);
-}
-
-.brick-card__eyebrow {
-  font-family: var(--font-mono);
-  font-size: var(--fs-200);
-  letter-spacing: var(--tr-eyebrow);
-  text-transform: uppercase;
-  color: color-mix(in srgb, var(--brick-ink), transparent 15%);
-  margin-bottom: var(--sp-2);
+  margin-bottom: var(--sp-4);
 }
 
 .brick-card__title {
@@ -108,19 +121,39 @@
 
 .brick-card__tagline {
   font-size: var(--fs-400);
-  color: color-mix(in srgb, var(--brick-ink), transparent 15%);
+  color: var(--brick-ink);
   max-width: 48ch;
   margin-bottom: var(--sp-5);
 }
 
+/* Metrics integrated as plain text, not a stamped tile — the brick's
+   own ink colour (already chosen per project for AA contrast, same
+   mechanism the tagline relies on) carries it without a debossed
+   plate. The plate/MetricStamp treatment stays reserved for the
+   case-study page, where a quick-glance summary before a full read is
+   earned rather than repeated on every card. */
 .brick-card__metrics {
   display: flex;
   flex-wrap: wrap;
-  gap: var(--sp-3);
+  column-gap: var(--sp-6);
+  row-gap: var(--sp-2);
   margin-bottom: var(--sp-5);
+}
+
+.brick-card__metric {
+  font-size: var(--fs-400);
+  color: var(--brick-ink);
+}
+
+.brick-card__metric strong {
+  font-family: var(--font-display);
+  font-size: var(--fs-600);
+  letter-spacing: var(--tr-display);
+  color: var(--brick-ink);
+  margin-right: var(--sp-2);
 }
 
 .brick-card__role {
   font-size: var(--fs-200);
-  color: color-mix(in srgb, var(--brick-ink), transparent 30%);
+  color: var(--brick-ink);
 }

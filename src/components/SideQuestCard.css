@@ -27,8 +27,11 @@
   margin-bottom: var(--sp-3);
 }
 
+/* Full --brick-ink, not dimmed — see BrickCard.css for why: on
+   red/azure/green faces, body text is already under 4.5:1 at full
+   opacity, so any transparency only pushes it further from AA. */
 .side-quest-card__kind {
-  color: color-mix(in srgb, var(--brick-ink), transparent 25%);
+  color: var(--brick-ink);
   font-size: var(--fs-200);
 }
 
@@ -60,11 +63,11 @@
 
 .side-quest-card__blurb {
   font-size: var(--fs-300);
-  color: color-mix(in srgb, var(--brick-ink), transparent 15%);
+  color: var(--brick-ink);
   margin-bottom: var(--sp-3);
 }
 
 .side-quest-card__role {
   font-size: var(--fs-200);
-  color: color-mix(in srgb, var(--brick-ink), transparent 30%);
+  color: var(--brick-ink);
 }

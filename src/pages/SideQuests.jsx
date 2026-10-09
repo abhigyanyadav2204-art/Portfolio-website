@@ -13,7 +13,6 @@ function SideQuests() {
         <div className="container">
           <SectionHead
             as="h1"
-            eyebrow="Side quests"
             title="Things that didn't make the main story."
             lede="Smaller projects and experiments that shaped how I think and work, even without a case study of their own."
           />
@@ -28,7 +27,7 @@ function SideQuests() {
 
       <section className="section side-quests-contact">
         <div className="container">
-          <SectionHead eyebrow="Connect" title={<>Building something?<br />Let's talk.</>} />
+          <SectionHead title={<>Building something?<br />Let's talk.</>} />
           <ContactPlate links={site.socials} resume={site.resume} />
           <Link to="/" className="side-quests-page__back">
             ← Back home

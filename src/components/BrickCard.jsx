@@ -1,7 +1,5 @@
 import { Link } from "react-router-dom";
 import Reveal from "./Reveal.jsx";
-import SizeChip from "./SizeChip.jsx";
-import MetricStamp from "./MetricStamp.jsx";
 import "./BrickCard.css";
 
 /**
@@ -10,27 +8,43 @@ import "./BrickCard.css";
  * stretched over the whole card via ::after — so the hit area is the
  * full brick but a screen reader announces one link ("The Handi Story
  * — read the case study"), not a dozen nested interactive regions.
+ *
+ * Footprint is driven by `project.brick.tier` (editorial judgment, not
+ * a formula off `size`): "standard" is one of two grid columns,
+ * "feature"/"open" span both. The feature tier (LaariKhojo) shows its
+ * one real teaser photo and a single headline metric — kept concise on
+ * purpose, so the extra width reads as space for the strongest piece
+ * of evidence, not a denser card. The case-study page carries the
+ * full depth for every project.
  */
 function BrickCard({ project, index, anchorId }) {
+  const { tier } = project.brick;
+  const metrics = tier === "feature" ? project.metrics.slice(0, 1) : project.metrics;
+
   return (
     <Reveal
       as="article"
       variant="snap"
       stagger={index}
       id={anchorId}
-      className="brick-card brick"
+      className={`brick-card brick-card--${tier} brick`}
       style={{ "--brick": project.brick.color, "--brick-ink": project.brick.ink }}
     >
       <div className="brick-card__body brick__body">
         <span className="brick-card__studs brick__studs" aria-hidden="true" />
 
-        <div className="brick-card__face">
-          <div className="brick-card__top">
-            <SizeChip size={project.brick.size} />
-            <span className="brick-card__timeline mono">{project.timeline}</span>
-          </div>
+        {project.teaserImage && (
+          <img
+            src={project.teaserImage.src}
+            alt={project.teaserImage.alt}
+            className="brick-card__photo"
+            loading="lazy"
+            decoding="async"
+          />
+        )}
 
-          <p className="brick-card__eyebrow">{project.eyebrow}</p>
+        <div className="brick-card__face">
+          <p className="brick-card__timeline mono">{project.timeline}</p>
 
           <h3 className="brick-card__title">
             <Link to={`/work/${project.slug}`} className="brick-card__link">
@@ -47,10 +61,12 @@ function BrickCard({ project, index, anchorId }) {
 
           <p className="brick-card__tagline">{project.tagline}</p>
 
-          {project.metrics.length > 0 && (
+          {metrics.length > 0 && (
             <div className="brick-card__metrics" aria-label={`${project.title} metrics`}>
-              {project.metrics.map((metric) => (
-                <MetricStamp key={metric.label} value={metric.value} label={metric.label} />
+              {metrics.map((metric) => (
+                <p key={metric.label} className="brick-card__metric">
+                  <strong>{metric.value}</strong> {metric.label}
+                </p>
               ))}
             </div>
           )}

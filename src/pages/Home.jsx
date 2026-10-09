@@ -24,7 +24,6 @@ function Home() {
           <div className="about-section__copy">
             <SectionHead
               id="about-title"
-              eyebrow="How I work"
               title="I like being where the problem is."
             />
             <div className="prose">
@@ -62,7 +61,6 @@ function Home() {
         <div className="container">
           <SectionHead
             id="sidequests-title"
-            eyebrow="Along the way"
             title="Not everything fits in a case study."
             lede="A hackathon, a drone build, a delivery cart, a ride to 17,800 ft. Smaller things that still shaped how I think and work."
           />
@@ -76,7 +74,6 @@ function Home() {
         <div className="container">
           <SectionHead
             id="contact-title"
-            eyebrow="Connect"
             title={<>Building something?<br />Let's talk.</>}
           />
           <ContactPlate links={site.socials} resume={site.resume} />

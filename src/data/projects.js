@@ -14,7 +14,7 @@ export const projects = {
     order: 1,
     status: "active",
     tagline: "A Hyderabadi biryani cloud kitchen, co-founded in college, that grew into a real restaurant.",
-    brick: { color: "var(--brick-red)", ink: "var(--c-ink)", size: [2, 4] },
+    brick: { color: "var(--brick-red)", ink: "var(--c-ink)", size: [2, 4], tier: "standard" },
     links: [],
 
     title: "The Handi Story",
@@ -129,7 +129,11 @@ export const projects = {
   order: 3,
   status: "shipped",
   tagline: "A discovery marketplace for street vendors and tiffin makers, built during an operations internship.",
-  brick: { color: "var(--brick-green)", ink: "var(--c-ink)", size: [2, 6] },
+  brick: { color: "var(--brick-green)", ink: "var(--c-ink)", size: [2, 6], tier: "feature" },
+  teaserImage: {
+    src: laarikhojoMap,
+    alt: "The live LaariKhojo map, showing vendor and tiffin-maker pins across Ahmedabad.",
+  },
   links: [],
 
   title: "LaariKhojo",
@@ -252,7 +256,7 @@ export const projects = {
   order: 2,
   status: "active",
   tagline: "A personal content brand and growth experiment, built from zero.",
-  brick: { color: "var(--brick-azure)", ink: "var(--c-ink)", size: [2, 3] },
+  brick: { color: "var(--brick-azure)", ink: "var(--c-ink)", size: [2, 3], tier: "standard" },
   links: [],
 
   title: "Benzene",
@@ -316,7 +320,7 @@ export const projects = {
   order: 4,
   status: "active",
   tagline: "An early-stage product helping students find the right people to build with.",
-  brick: { color: "var(--brick-orange)", ink: "var(--c-ink-invert)", size: [1, 4] },
+  brick: { color: "var(--brick-orange)", ink: "var(--c-ink-invert)", size: [1, 4], tier: "open" },
   links: [],
 
   title: "Meet Ups",

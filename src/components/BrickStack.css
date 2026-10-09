@@ -2,8 +2,25 @@
   border-top: 1px solid var(--c-hairline);
 }
 
+/* Mobile-first: one deliberate column, every brick equal width, in
+   document order. The desktop grid below is a distinct composition,
+   not a stretched version of this one — see Hero's own 64rem
+   breakpoint for the same pattern. */
 .brick-stack {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 1fr;
   gap: var(--sp-6);
+}
+
+@media (min-width: 64rem) {
+  .brick-stack {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Feature (LaariKhojo) and open (Meet Ups) tiers span the full
+     width; standard tiers pair up, two to a row. */
+  .brick-card--feature,
+  .brick-card--open {
+    grid-column: span 2;
+  }
 }
